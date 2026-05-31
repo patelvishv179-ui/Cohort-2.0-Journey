@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+
+    height: 50%;
+    width: 100%;
+    background-color: lightblue;
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+}
+
+.main::-webkit-scrollbar{
+
+    /* display: none; */
+    background-color: lightcoral;
+    height: 20px;
+
+}
+
+/* .main::-webkit-scrollbar-thumb{
+
+    background-color: lightcyan;
+
+} */
+
+.main::-webkit-scrollbar-button{
+
+    background-color: lightgreen;
+    color: black;
+
+}
+
+.child{
+
+    flex-shrink: 0;
+    height: 300px;
+    width: 300px;
+
+}
+
+.child img{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}

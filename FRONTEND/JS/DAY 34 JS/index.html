@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 34 | JavaScript 01/01/2026</title>
+</head>
+<body>
+    <script>
+
+
+    //Allow only 3 attempts enter correct password if user gets it right early , stop. if not ->  Account Locked
+
+    let correctpassword = "Vishv@123";
+    let attempt = 3;
+    let takenpass = null;
+    while(attempt > 0){
+        takenpass = prompt(`Enter Password:\nAttempt left:${attempt}`);       
+        if(takenpass !== correctpassword){
+            attempt--;
+            console.log("Incorrect Passowrd");
+        }
+        if(takenpass === correctpassword){
+            console.log("Password Matched");
+            break;
+        }
+    }
+
+    if(attempt===0){console.log("Account Locked");}
+
+    </script>
+</body>
+</html>

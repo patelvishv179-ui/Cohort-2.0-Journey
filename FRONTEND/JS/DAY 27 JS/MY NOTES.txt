@@ -1,0 +1,78 @@
+js-> Devloped by Brenden Eich (Work in NetScap)
+js:->Make in some 14-15 Days
+js:-> it is a scripting language(type of a programming language)
+js:->programming language means give a instruction to a machine to do something based on logic.
+js:->A scripting language is a programming language used to automate tasks and control other programs.
+
+var:-> Can be Redeclared
+var:->Fucntional Scoped
+var:->Reassinable
+
+let:->Can not be Redeclared
+let:->Can be a Reassinable
+
+const:->Cannot be Reassinable
+const:->Need a Initital value
+
+console.warn()->Warning showcase in yellow color
+console.eror()->eror showcase in red color
+console.info():-> Same as .log but in some browser it show i symbol before message
+cosnole.table():->Print a object as a table
+cosnole.log():-print a message on console
+
+alert()->Give a Alert Dialog box
+prompt()->Take a input from user
+
+String->A string in JavaScript is immutable sequence of characters used to store text
+immutable means:
+➡ You cannot change a string directly after it is created.
+➡ If you modify it, JavaScript actually creates a new string.
+
+* slice():->
+
+"vishv".slice(0,3); output:-> vis
+start from 0th index and beforth from a 3rd index it cut the string
+
+* templete string:->
+
+use a varible actual value , templete string create using backticks ``
+
+let a =10;
+console.log(`a value is : ${a}`);
+output: a value is 10;
+`${2+2}` output 4
+
+* split()
+
+split the string particular word or charactrer and store it into a array example:
+
+"Vishv".split('s');
+output: ['Vi', 'hv']
+
+* Replace();
+
+replcae a charcter or word with another word or characters
+
+Replce a first matching word or charcter
+
+"VishV".replace("V","R");
+output: RishV
+
+* ReplcaeAll():
+
+Replace a word or characters with all matching words or characters
+
+"VishV".replaceAll("V","R");
+output: RishR
+
+* Include():- if string have a word or charcter then it return true otherwise return false ;; example:
+
+"Vishv".Include("V");
+output: true
+
+* Statments and Expressions
+
+ek aisa code jo fixed answer de de ek complete line ka code  jiske last me ;(semicolumn) ho-> Statments
+
+12+13 -> Value Produce called Expressions
+

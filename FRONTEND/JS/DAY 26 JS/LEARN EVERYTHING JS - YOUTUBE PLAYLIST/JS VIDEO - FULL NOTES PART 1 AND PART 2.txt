@@ -1,0 +1,3098 @@
+    JavaScript was created by Brendan Eich in 1995, while he was working at Netscape. He developed the first version in about 10 days.
+
+    JavaScript originally had the name Mocha, then it was renamed to LiveScript, and finally became JavaScript.
+
+    JavaScript is standardized by ECMAScript (ES).
+
+    ES5 introduced many core features of modern JavaScript.
+
+    ES6 (also called ES2015) introduced let, const, arrow functions, classes, modules, etc.
+
+    In ES5, variables were declared using var.
+    In ES6, new variable declarations let and const were added, and they follow block-scope rules.
+
+    JavaScript is a programming language, not “only a scripting language.”
+    It is a high-level, multi-paradigm, dynamic programming language used for both front-end and back-end development.
+
+    Web browsers run JavaScript using JavaScript engines.
+    The first one was SpiderMonkey, also created by Brendan Eich.
+
+    ------- Keyword -------
+
+    A keyword in JavaScript is a special reserved word that has a specific meaning and purpose in the language.
+
+    ---- Variables ----
+
+    var and let: use for declare a variable value can change with operations and also asign it.
+
+    var:->window me add hota hai, hamesha fucntion scoped hota he, appfirse declare kar sakte ho same name se and eror nahi ayega,
+    dharo ke ek fucntion banavyu jeni andar if block ma var banvyo,to biji languages ma te futncion ma if ni bahar access nai thai sake but js ma if ni badhar fucntion ma game tya thai sakse karan ke var is fucntion based scop:
+    function abcd(){
+
+    if(true){
+        var a = 10;
+    }
+
+    console.log(a); //In other laguage a var is heere not accesible but in js we use it here beacuse it is function based
+
+    }
+
+    let->same name thi variable farithi declare na kari sakay, widnow ma add na thay
+
+
+    const: implemently assigned value cannot be change
+
+        const a = 50;
+
+        console.log(a + 10); // Output: 60
+
+        console.log(a); // Output: 50
+
+        a = a + 10; 
+        // ❌ Not allowed — 'a' is a constant
+        // Error: Uncaught TypeError: Assignment to constant variable.
+
+        console.log(a); // This line will not run because the error stops the script
+
+    const as a object::
+
+    const locks the variable reference,
+
+NOT the inside data of the object.
+
+So when you do this:
+
+-------
+ scop
+ --------
+
+ global: khule me declare kiya he na kisi bracket ke andar ya na kisi fuction ke andar
+
+ futnctional:
+    only accesible in declared fucntion 
+
+blocks:
+declared in brackets but there is one problem:
+var does not respect bracket
+example:
+var a = 10;
+{
+    var b = 123; //aacees anywhere in program beacuse it is not in fucnttion directly but indirectly it is in function and var is has fucntion based scop
+}
+
+------
+//Temporal Dead Zone - utna area jitne me js ko pata he varible exists karta he par vo apko value nahi de sakta
+
+console.log(a);
+
+let a = 12; //It is not allowed 
+            // Uncaught ReferenceError: Cannot access 'a' before initialization
+
+console.log(a);
+
+//Uncaught ReferenceError: a is not defined
+
+console.log(a);
+
+var a=10; //undefined
+
+------HOISTING IMPACT PER Type -------------
+
+hoisting -> ek varible ko jab js me banate he to voh varible do hisso me tut jata he and uska declared part upar chala jata he and uska initialization part niche rah jata he
+
+hoisting tran part ma thay:
+
+var a = 12;
+
+var a = undefined; //line tuti  aa part sauthi upar jato re he 
+a = 12; //line tuti ane intitalization part niche rahi jase
+
+---------------------
+hoiting using let
+
+console.log(a);
+let a=13;
+
+//let kahe chhe ke tame varible ne tya sudhi access nahi kari sako jya sudhi tame tene intialize n karo
+// ane have smjo a=13 line breack thase let a = undefined peli line ma jati rese ane 13 te 2ji line ma rahi jase code mutabic to let no rul chhe no intitalize no use meanse here a = undefined so we cannot use it so it give err : Uncaught ReferenceError: Cannot access 'a' before initialization 
+
+final commit: var->hoist->undefined
+              let->hoist->ReferenceError
+                const->hoist->ReferenceError
+
+
+==================================
+
+
+const user = {name:"Vishv",age:"20"}
+
+// Object.freeze(user);//lock the object modification
+
+user.name = "Ram"; //alowed
+
+console.log(user);
+
+user = { name: "Ram", age: "20", std: "3rdcollage" } //not alowed
+
+
+===Pratcise set 1 ====
+
+// const name = "vishv";
+
+// const age = "20";
+
+// Question 2
+
+// let x = 5;
+// let x = 10; Not Valid Beacuse redeclaration
+
+// console.log(count);
+// var count = 42;
+
+//Question 4:
+
+// const user = { name:"vishv", age:"20"}
+
+//Question 5
+
+// Try accessing a let variable before declaring it — what error do you see? -- reference error
+
+//Question 6:  Change a const array by pushing a value. Will it throw an error?
+//No
+
+const array = [1,2,3];
+
+array.push(4); //Appends new elements to the end of an array, and returns the new length of the array.
+
+array mate pan 
+   Object.freeze(array); use karvu
+
+----------------------------------------------------------------
+
+Data types  + type system
+
+Primitive: Bracket nahi hote + copy kar sakte he directly
+
+Refrences :- Brakcet hoy
+
+Primitive:- aisi sari values jinko copy karne par tumhe ek real copy mil jase , string,boolean,null,number,Nun,Undefined,Symbol
+
+Reference:- inko copy karne par real copy nahi milti Refrences melega parent ka, {},(),[]
+
+-Primitive Operation ---
+
+let a = 12;//a=12
+
+let b = a; //b=12
+
+a = a + 2; //a = 14
+
+console.log(a); //14
+
+console.log(b); //12 copy real value
+
+-Refrences Operation---
+
+let a = [1,2,3]; //a = [1,2,3]
+
+let b = a //b have a refernce of a, b does not have a real copy means b change a change, a change b change also
+
+b.push(4); //a ma pan add thase b=[1,2,3,4] and a looks like a = [1,2,3,4]
+======
+
+string tran rite lakhi skay: doubl,signle quate and ``(backtics)
+
+
+-----------
+
+nul ka matlab hai apne jan buz kar value nahi didhu
+
+undifiend: apne ek varible banaya aur usey value nahi di jo by default usko undefined milti hai
+
+let a = Number.MAX_SAFE_INTEGER
+console.log(a); //9007199254740991-- It is a maximum value store safe as integer, jo tamare anathi pan motu joitu hoy int to we use bigint,
+bigint use karva fakt apne etlu karvanu ke numbers lakhi chhele n lagavi devo ex:- 9007199254740991232328n
+
+let bigint thi operation kariye:
+let a = 9007199254740991n;
+
+a = a+1n; //Jodva mate pachhad n lagavvo jaruri chhe
+
+
+-------
+
+//Future me hum koi libraries use karenge ab is case main un libraries main kai bar kucchh fields hoti hai jinse similar hum bhi bana dete hai aur galti se hummari banai hui fileds us library ki originl fields ko change kar deti he 
+
+libraries->Third Party Code We use 
+
+---Symbol-unique immatuable value-----
+
+let u1 = Symbol("Uid"); //Output in Excalridraw file
+
+let u2 = Symbol("Uid");'
+
+
+Another example:
+let obj = {
+    uid: 1,
+    name: "Harsh",
+    age: 20,
+    email: "vishv123@gmail.com"
+}
+
+// obj.uid = ""; 
+
+
+let u1 = Symbol("uid");
+obj[u1]=2; //Potanu inque identifier chikavi didhu
+
+
+============= Refrences Types ==========
+
+We Cannot Copy Real Value, We Copy Refrence
+
+
+==========dynamic Typing ===============
+
+Js me Sattic Typing nahi he and yaha par hai dynamic Typing
+
+jiska matlab hai aap data ko change kar sakte ho kyoki yaha par yaha par dynamic daya types hai 
+
+example: let a = "Vishv"; let a = 13;, let a = {name:"Vishv"}
+
+Sattic is best beacause you know data is which kind of like integer.
+
+======= types of quirks (eg. types of null == 'object') ========
+
+quirks no image Excalridraw ma chhe
+
+
+=== Type Coercion (== vs ===) ====
+
+basically it is a concept in which one type automatically convert.
+
+"5" + 1 // outpt 51 avse only js kari sake chhe ,+ operator programming ma concatination ane sum banne kare , ahi smjva jevu chhe ke 1 ne kem string ma convret karyu 5 ne number ma kem nai , smjo js e mane chhe ke + oprator use tahyo hoy ane jo teni koi pan operand stirng chhe to tevu smje chhe ke ane bhegu j karvanu chhe sarvado nai
+
+parantu - ma kevu chhe te ek j kam kare chhe substract mate jo tame "5"-1 lakhso to 4 avse karn ke te ek j kam kare chhe minus
+
+
+-===== Turthy falsy values ======
+
+tame if(12) na lakhi sako mate js e values ne be part ma todi didhu chhe truthy ane falsy value ma jem ke tame null false lakhso to te 0 value api dese
+
+0 --> false  "" null undefined NaN document.all -- ana sivay ni badhi truthy
+
+like if(-1) to aa truthy j avse karn ke aa falsy ma nathi
+
+truthy falsy value check karva agad dable not qualto lagavi devu example:
+
+!!12 -> true
+
+!!''-> false
+
+!!document.all - > false
+
+have jo tame if(null){} - lakhyu to te falsy value apse 0 ane te thai jase if(false)
+
+final jya jaruri hoy truth false apvu ane tame tya game te api do to js check karse tenu nature ke te truthy chhe ke falsy
+
+gauss the output:
+
+true + false // output : 1 true ni value 1 ane false ni  0
+
+null + 1 //output: 1
+
+5 + "5" //output 55
+
+!!undefined //false
+
+
+Confusion : -> typesof NaN === 'number' // true
+
+why not a number(NaN) is a number beacause it is a failed mathematical numeric operation like 5 * "harsh" --> Not Allowed Return Nun
+ane jyare pan failed mathematical opeartion hase to  teni value NaN j Thase
+
+Confusion : Difference beetween undefiend and null
+
+let x;
+cosnole.log(x); //undefined
+let y = null;
+console.log(y) // null
+
+null apne manually daie chhie jyare undefiend e darek varible ne made chhe je declared chhe pan value store nathi
+
+
+
+================== Operators Phase 3 =========================
+
+1. Arithmetic:
+
+        + ,- ,/ ,* ,%, **(expomonsiation)
+
+        + = addition + concetination
+        "ha" + "rsh"; output: harsh
+
+        %: mudler give a sheshfall
+
+        like 12%3 = 0
+
+        2**3 = 8 (2 ki power 3)
+
+2. Comparison:
+
+
+    ==: compare values(it is not strict)
+
+    ===: compare value with data type
+
+    !=:Not Equal 12!=13 //true but 12==13//false (it is not strict)
+
+    !==:Not Equal to Equal to 12!=="harh" true and if 12!="12"then false
+
+    >=:12>11 true 
+
+    <=:12<11 false
+
+    >:12>14 false
+
+    <:12<14 true
+
+3. Assignment Operators:
+
+    = : asign a value
+
+    +=: add and assigned
+
+    -=: substract and assigned
+
+    *=: multiply and assign
+
+    /=: divide and assign
+
+    %=: mode and assign
+
+    let a = 12;
+
+a+=13; //answer: 25;
+
+a-=13;//answer 12 beacuse 25-13: 
+
+a*=2;//asnwer 24 beacuse a=12*2
+
+a/=2; //answer:12 beaucse 24/2 = 12
+
+a%=2; //0 answer beacuse divide kari ne moudule asign karvanu chhe na ke sum 
+
+
+4. Logical operation:
+
+&& - dono condition must be true (AND) 
+
+|| - any one condition true (OR)
+
+! - !12 = 12 ni by default value truly hoy agad ! lagyu to te false bani gayu 
+
+example: if(!12){
+    console.log("Hello");
+}
+
+apne agad use karyu tu yad ayu !!12 true beacuse
+12 nu default nature true ,!12=false and !!12=true karan ke apne 12 print karsu to 12 output avse truthy chhe ke falsy nai khbr pade
+
+5. unary : signla value par j chale
+
++
+-
+!
+typeof
+++
+--
+
+exmaple:  +"5" karso to 5 number ma convert thai jase
+beaucse This is called type coercion.
+        jo +"Vish" lakhyu to vish number ma nai convert thay failed operation kevase so NuN avse.
+
+
+        ++a value ko turant badhake print karo
+        jem ke jo hu ++a karyu example:
+
+        let a = 10; ++a; a ni value tartj badlo ane print karo
+
+        a++(post increment) vakue ko print karo aur badhao
+
+        exmaple:
+        let a = 10; a++; a ni value print karo pachhi j bandlo 
+
+        let a = 10;
+        ++a; //a=11
+        a++//a=11
+        a//12
+
+6. Ternary
+
+?: : condition true excetute block before : and if false execute block after :
+
+exmaple:
+
+let age = 17;
+
+(age>=18) ? console.log("Adult") : console.log("Not Adult");
+
+
+============= typesof and instanceof ===========
+
+typeof ek vastu khotu batave chhe
+typeof null -> object 
+typeof []->object which is incorret
+typeof NuN -> number
+
+let a = [];
+
+if we write typeof a then it print object but a is not a obj
+so we use a instanceof Array -> returns true
+if a ={}
+then a instanceof Object->true
+NOTE: instanceof ALWAYS WORK IWTH ONLY Reference TYPEs
+if we write NaN instanceof Number -> it retrun false which is correct
+
+Practise Questions:
+
+1. Ternary Question:
+
+let score = 45;
+
+let grade = (score>=90) ? "A" : (score>=75) ? "B" : (score>=45) ? "C" : "Fail";
+
+console.log(grade);
+
+2. Unary Op:
+
+let x = 3;
+let y = x++;
+cosnole.log(x,y); //4,3
+
+3. unary op:
+
+let n = 5;
+let result = n++ + ++n; (5+7 (7 beacause pela n++ chhe jya pela 5 print thaya pachhi value 6 tahi gayi tahi gayi n ni value))
+cosnole.log(result); //12
+
+4.
+
+let likes = 100;
+
+function likepost(){return ++likes;}
+
+cosnole.log(likepost());
+cosnole.log(likes); //101
+
+PROMPT FRO QUETIONS:give me a js increment decrement trickey questions like let likes = 100;
+
+function likepost(){return ++likes;}
+
+cosnole.log(likepost());
+cosnole.log(likes); //101==answewrs na apta hu answers apis
+
+
+=-=-=-=-=-=-=---=-=
+
+Build a calculator:
+
+let a;
+
+let b;
+
+let op;
+
+function Cal(a,b,op){
+
+    if(op=="+"){
+        return a + b;
+    }    
+    
+    if(op=="-"){
+        return a - b;
+    }    
+    
+    if(op=="*"){
+        return a * b;
+    }
+    
+    if(op=="**"){
+        return a ** b; //a rease to b
+    }
+
+    if(op=="%"){
+        return a % b;
+    }
+
+}
+
+console.log(Cal(10,20,"-"));
+
+Build Score Result:
+
+let score = 20;
+
+let Result = (score>=90) ? console.log("Exellent") : (score>=70) ? console.log("Good") : (score>=40) ? console.log("Average") : console.log("Fail"); 
+
+console.log(Result);
+
+========Control Flow =======
+
+padhna kya he: if,else if,switchcase,early return pattern
+
+if else:
+
+let age =30;
+
+if(age>=32){
+    console.log("Midovert");
+}
+
+else if(age>=18){
+    console.log("Adult");
+}
+
+else{
+    console.log("You are not adult");
+}
+
+Switch Case:
+
+let day = "WednesDay";
+
+switch(day.toLowerCase()) {
+
+    case "monday":
+        console.log("Monday");
+        break;
+
+    case "tuesday":
+        console.log("Tuesday");
+        break;
+
+    case "wednesday":
+        console.log("Wednesday");
+        break;
+
+    default:
+        console.log("Invalid day");
+}
+
+break nahi lagadiye to agad na badha cases no code chalse
+કારણ: fall-through behavior.
+Once a match is found, JavaScript does NOT check case values anymore.
+It just keeps executing the next lines until a break.
+
+==Early Return Pattern==
+
+function getVal(value){
+
+    if(value < 100) return "A";
+    else if(value < 75) return "B"; 
+    else if(value<50) return "C";
+    else return "D";
+
+}
+
+console.log(getVal(40)); //ahi hu game te value 100 thi niche apis to te peli conditon j satisfied thai jase ane niche condtion check karva jase j nai called early return
+
+
+Practise:
+
+Make a calculator:
+// Score Calculator using Funciton
+
+function getGrade(marks){
+
+    if(marks >=90 && marks<=100){
+        return "A+";
+    }
+
+    else if(marks >=80 && marks<=89){
+        return "A";
+    }
+
+    else if(marks >=70 && marks<=79){
+        return "B";
+    }
+
+    else if(marks >=60 && marks<=69){
+        return "C";
+    }
+
+    else if(marks >=33 && marks<=59){
+        return "D";
+    }
+
+    else if(marks >=0 && marks<=32){
+        return "Fail";
+    }
+
+    else{
+        return "Invalid Marks";
+    }
+
+}
+
+console.log(getGrade(70));
+
+
+- but chalo aa j fucntion ne early return thi banviy
+
+// Score Calculator using Funciton
+
+function getGrade(marks){
+
+    if(marks >=90 && marks<=100) return "A+"; 
+
+    if(marks >=80 && marks<=89) return "A";
+
+    if(marks >=70 && marks<=79) return "B";
+
+    if(marks >=60 && marks<=69) return "C";
+
+    if(marks >=33 && marks<=59) return "D";
+
+    if(marks >=0 && marks<=32) return "Fail";
+
+    else return "Invalid Marks";  
+
+}
+
+console.log(getGrade(30));
+
+
+Early return = function ની શરૂઆતમાં જ 条件 fail થાય તો તરત return કરી દેવું.
+
+Example:
+
+if (!user) return "No user";   // early return
+
+--------------- Now Let Make a Stone Paper Sessor ------------
+function stonePaperScissor(user, computer){
+
+    if(user === "Stone" && computer === "Scissor") 
+        return "User wins: Stone breaks Scissor";
+
+    if(user === "Scissor" && computer === "Stone") 
+        return "Computer wins: Stone breaks Scissor";
+
+    if(user === "Paper" && computer === "Stone") 
+        return "User wins: Paper covers Stone";
+
+    if(user === "Stone" && computer === "Paper") 
+        return "Computer wins: Paper covers Stone";
+
+    if(user === "Scissor" && computer === "Paper") 
+        return "User wins: Scissor cuts Paper";
+
+    if(user === "Paper" && computer === "Scissor") 
+        return "Computer wins: Scissor cuts Paper";
+
+    return "Invalid choice";
+}
+
+console.log(stonePaperScissor("Scissor","Paper"));
+
+
+sorter::
+
+function sps(user,computer){
+
+    if(
+        (user !== "stone" && user !== "paper" && user !== "scissor") ||
+        (computer !== "stone" && computer !== "paper" && computer !== "scissor")
+    ){
+        return "Invalid Choice";
+    }
+    if(user===computer) return "Draw";
+
+    if(user==="scissor" && computer==="paper") return "User Wons";
+
+    if(user==="stone" && computer==="scissor") return "User Wons";
+
+    if(user==="paper" && computer==="stone") return "User Wons";
+
+    else return "Computer Wons";
+
+}
+
+console.log(sps("paper","stone"));
+
+More Sorter::
+
+function sps(user,computer){
+
+        if(
+        (user !== "stone" && user !== "paper" && user !== "scissor") ||
+        (computer !== "stone" && computer !== "paper" && computer !== "scissor")
+    ){
+        return "Invalid Choice";
+    }
+
+    if(user===computer) return "Draw";
+
+    if(user==="scissor" && computer==="paper") return "User Wons";
+
+    if(user==="stone" && computer==="scissor") return "User Wons";
+
+    if(user==="paper" && computer==="stone") return "User Wons";
+
+    else return "Computer Wons";
+
+}
+
+console.log(sps("paper","stone"));
+
+-------------
+
+LOOPS
+
+for,while,do while
+break, continue
+
+fore-of,for-each for arrays
+
+for-in ,Object Entities for objects
+
+====
+
+No Gauranty kab rukna he while loop
+
+//1-40 for
+//hello na aajaye - while loop
+
+now start LOOPS
+
+1. for loop:
+
+for(start,end,change){//code}
+
+2. while
+start
+while(end){
+    //code
+    Change;
+}
+
+3. do while 
+
+do {
+    
+} while (condition);
+
+let i = 10;
+
+do {
+    
+    console.log(i);
+    i++;
+
+} while (i<=20);
+
+4. continue : agad jata raho example:
+
+for(let i=0; i<=5; i++){
+    if(i==3){continue;}
+    console.log(i);
+} output: 3 sivay badha print thase
+
+QUetions around loop:
+
+//Question 1 print 1 to 10 using for
+
+// for(let i = 1; i<=10; i++){
+//     console.log(i);
+// }
+
+//Question 2 - print 10 to 1 using while
+
+// let i = 10;
+
+// while(i>=1){
+//     console.log(i);
+//     i--;
+// }
+
+// for(let i=10; i>=1; i--){
+//     console.log(i);
+// }
+
+// let i=10;
+// do{
+//     console.log(i);
+//     i--;
+// }while(i>=1)
+
+
+//Question 3 - print even number from 1  to 20 using a for loop
+
+// for(let i=1;i<=20;i++){
+
+//     if(i%2==0){
+//         console.log(i);
+//     }
+
+// }
+
+//Question 4: Print Odd numbers from 1 to 15 using a while loop
+
+// let i = 1;
+
+// while(i<=15){
+
+//     if(i%2!==0){
+//         console.log(i);
+//     }
+
+//     i++;
+
+// }
+
+
+//Question 5: print multiplication table of 5 (i.e. 5*1=5)
+
+// for(let i=1; i<=10; i++){
+
+//     let result = 5 * i;
+
+//     console.log(`5 * ${i} = ${result}`);
+
+// }
+
+//Question 6: Find the sum of the number from 1 to 100 using loop
+
+// let i=1;
+// let sum=0;
+// while(i<=100){
+//     sum= sum + i;
+//     i++;
+// }
+
+// console.log(sum);
+
+// let sum=0;
+
+// for(let i=1;i<=100;i++){
+    
+//     sum=sum+i;
+
+// }
+
+// console.log(sum);
+
+// let sum = 0;
+// let i=1;
+// do {
+//     sum=sum+i;
+//     i++
+// } while (i<=100);
+// console.log(sum);
+
+//Question: 7: print all the number beetween 1 to 50 that are divided by 3
+
+// for(i=1; i<=50; i++){
+//     if(i%3==0){
+//         console.log(i);
+//     }
+// }
+
+// let i =1;
+// while(i<=50){
+//     if(i%3==0){
+//         console.log(i);
+//     }
+//     i++;
+// }
+
+// let i =1;
+// do{
+
+//     if(i%3==0){
+//         console.log(i);
+//     }
+
+//     i++;
+
+// }while(i<=50)
+
+
+//Question 8 : Ask the user for a number and print whether each number from from 1 to that number is even or odd
+
+// let num=prompt("Enter a Number to take odd and even numbers:");
+
+// for(let i=1; i<num; i++){
+//     if(i%2==0){
+//         console.log(`${i} is Even`);
+//     }    
+    
+//     if(i%2 !==0){
+//         console.log(`${i} is Odd`);
+//     }
+// }
+
+//Question 9: Count How Many Numbers Beetween 1 to 100 is divide by both 3 and 5
+
+// for(let i =1; i<=100; i++){
+
+//     if(i%3==0 && i%5==0){
+//         console.log(i);
+//     }
+
+// }
+
+//Question 10: Stop at first multiple of 7
+
+//write a loop from 1 to 100 that print each number stop completely when it finds the fisrt number divide by 7
+
+// for(let i=1; i<=100; i++){
+    
+//     if(i%7==0){
+//         break;
+//     }
+
+//     console.log(i);
+
+// }
+
+//Question 11: skip devided by 3
+
+//write a loop from 1 to 20 that: skips numbers divided by 3
+//print  all other numbers
+
+// for(let i=1; i<=20; i++){
+
+//     if(i%3==0){continue;}
+    
+//     console.log(i);
+
+// }
+
+//Question 12: Print First 5 odd numbers only
+
+//write a loop  from 1 to 100 that prints only 5 odd numbers then stop the loop odd=eki
+
+// let counter = 0;
+
+// for(let i=1; i<=100; i++){
+
+//     if(i%2 !== 0 && counter<=5){
+    
+//         counter = counter + 1;
+//         console.log(i);
+
+//         if(counter==5) break;
+
+//     }
+    
+// }
+
+//count odd number beetwen 1 to 50
+
+// let count = 0;
+
+// for(let i=1; i<=50; i++){
+//     if(i%2!==0){
+//         count+=1; //count = count +1;
+//     }
+// }
+
+// console.log("Odd Numbers beetween 1 to 50 is " + count);
+
+-------------------------------------------
+
+sum of digit:
+
+let num = Number(prompt("Enter Number"));
+let sum = 0;
+
+while(num > 0){
+    let digit = num % 10;
+    sum += digit; //sum=sum+digit
+    num = Math.floor(num / 10);
+}
+
+alert("Sum of Digits is " + sum);
+
+
+//Modulo = jo left said nani hoy to tej modulo
+//jem ke 3%10 3 e 10 karta nanu chhe to 3%10=3 j avse 
+
+-------------------------   
+
+Number of Digit Count
+let num = 12345;
+
+let count = 0;
+
+while(num>0){
+    count ++;
+    num=Math.floor(num/10);
+}
+
+console.log("Number of digits in 12345 is " + count);
+
+-------------
+
+Confusion:
+
+while loop tyre use thay jyare khbr na hoy ke kyare ruksu
+
+for loop jyare khbr hoy start end and change
+
+FOR Example — Print even numbers 1 to 10
+for(let i=1; i<=10; i++){
+    if(i % 2 === 0) console.log(i);
+}
+
+✔ WHILE Example — Run until battery is charged
+let battery = 20;
+
+while(battery < 100){
+    battery++;
+    console.log("Charging:", battery);
+}
+
+=======================Functions====================
+
+Sylabus:
+
+        fucntion declarations EXpressions and arrow fucnitons
+        parameters and arguments
+        default,rest and spread parameters
+        Return values and early returns
+        First class fucnitons(assign to variables,pass as arguments,retrun from other fucntions)
+        Higher order fucnitons
+        Pure vs impure fucnitons
+        Clousers and lexical scoping
+        IIFE(immediatly invoked fucnitons EXpressions)
+        hoisting Differences beetween declarations and EXpressions
+
+Common Confusion:
+
+    Arrow vs Regular fucniton: this context
+    fucniton Hoisting and TDZ
+    scope chaines and Clousers Traps
+
+Midset: Fucntions = Logic blocks + Memory holders(clousers)
+
+    Practise:
+    1. Write x
+    2. Create a greet function with default name
+    3. Sum all numbers using rest parameter
+    4. Create a closure counter function
+    5. Write a function that returns another function
+    6. Use a function to log even numbers in array
+    7. Create a pure function to add tax
+    8. Use IIFE to show welcome message
+    9. Write Discount Calculator (HOF style)
+    10. Make a Uppercase Transformer using HOF.
+    11. use IIFE to isolate variables.
+
+================================================
+
+FUCNTION STARTS:
+
+// function SayHello(){
+//     console.log("Hello !");
+// }
+
+// SayHello();
+
+//Fucntion Declaration and Function Statement
+function abcd(){}
+
+// Function Ecpression
+
+// variable ma store karo function ne tene Fucntion Expression Kevay
+
+// let Sum = function(a,b){
+
+//     //Variable Ka Name hi Fucntion ka name he 
+//     return a + b;
+
+// }
+
+// console.log(Sum(10,20));
+
+// Fat Arrow Functions: let variablename = (parameters)=>{}
+
+// let value = a =>{
+
+//     console.log("Value of a is :" + a);
+//     console.log("one parameter doesnot required brackets");
+
+// }
+
+// value(1);
+
+
+// default,rest and spread parameters
+
+//Default
+// function add(value1 = 0,value2 = 0){
+
+//     console.log(value1 + value2);
+
+// }
+
+// add();
+
+//Rest or Spread - jab arguments kai sare ho tab hame utne hi parameter banne padnge isse  bach ne ke lie ham rest ka use karte he , agar ...function ke parmeter space me lage to wo rest he , and agar wo arrays and objects me lage to wo spread opeartor hai.
+
+// function sum(...val){
+
+  
+//     console.log(val[0]); //1
+//     console.log(val[1]); //2
+//     console.log(val[5]); //6
+//     console.log(val[3]); //4
+
+// }
+
+// sum(1,2,3,4,5,6);
+
+// FCF(First class Fucntions) - fucntions ko values ki tarah treat kar sakte he
+
+// argument me fucntion bhi bhej sakte he 
+// function ne varible ma store kari sako
+
+
+// let age = 18;
+
+// function Hello(message){
+
+//     console.log("Hello " + message()); //ahi dhyan rakhvu message ek fucntion chhe varible nathi
+
+// }
+
+// Hello(function(){
+
+//     if(age>=18){
+//         return "adult";
+//     }
+//     else{
+//         return "child";
+//     }
+
+// });
+
+// Higher order fucntions: aise functions jo ki return ho ya yesa smj lo wo fucntion hota he jo ki return kare ek fucntion ya fir accept kare ek fucntion apne parameter me 
+
+// function abcd(val){
+
+//     //this is higher order
+
+//     return function(){
+
+//     }
+
+// }
+
+// abcd(function(){
+
+//     //this is fist class 
+
+// });
+
+// function abcd(){
+//     console.log("This is outer (abcd) fucntion");
+//     return function(){
+//         console.log("This is inner fucntion");
+//     }
+// }
+
+// abcd()();-->be bracket karanke pelu pelu fucntion call karva ane biju inner fucntion call karva
+
+// pure vs impure fucntions
+
+//Pure:-> ek aisa fucntion jo ki bahar ki value ko  na bdle vo hai pure fucntion 
+
+//Impure: aisa fucntion jo bahar ki value badlde impure
+
+// Pure:
+
+// let a = 12;
+// function abcd(){
+//     console.log(a);
+// }
+// abcd();
+
+//Impure:
+// let a = 12;
+// function abcd(){console.log(++a);} //bahar ni a ni value badli dese
+// abcd();
+
+
+// Clousers: ek fucntion jo return kare ek aur fucntion aur return hone wlaa fucntion hamesha use karega parent fucntion ka koi value
+
+// function abcd(){
+//     let a = 10;
+//     return function(){
+//         return a + 20;
+//     }
+// }
+
+// console.log(abcd()());
+
+//Lexical Scoping - physical position scop =lexical scoping
+
+// function abcd(){
+//     let a = 12; //abcd ma game tya a access thai sake
+//     function defg(){
+//         let b =13;//defg ma game tya access thai sake 
+//         function ghij(){
+//             let c =14;
+//         }
+//     }
+// }
+
+
+// IIFE (immediatly invoked fucnitons EXpressions))
+//fucntion nam nai alvanu pura ne braket thi cover kari do bajuma () lagavi do 
+
+// (function(){
+//     console.log("Hello");
+// })();
+
+//hoisting Differences beetween declarations and EXpressions
+
+//nicheno code chalse karnke fucntion declaration chhe 
+
+// abcd();
+
+// function abcd(){
+//     console.log("abcd");
+// } 
+
+//nicheno code nai chale function expression chhe 
+
+// abcd();
+
+// let abcd = function(){
+//     console.log("abcd");
+// } //hoist nahi hota
+
+
+// abcd();
+
+// let abcd = function(){
+//     console.log("abcd");
+// } //hoist nahi hota
+
+
+//Q1: What's Difference Beeteween fucntion declaration and expression in terms of hoisting?
+
+// abcd(); //hositing allowed; fucntion declaration and defination upar jatu rese ane call niche avtu rese but fucntion expression ma evu nahi thay karanke te ek varible ma j store thay chhe ane varible ma kevu hoy tamne khbr chhe fucntion call upar jase varible nu but varible nu intitalization niche rai jase.
+// function abcd(){
+//     console.log("This is Fucntion Declaration");
+// }
+
+
+//Q:2: Convert this fucntion into arrow fucntion
+//fucntion multiply(a,b){return a*b;}
+
+// let multiply = (a,b)=>{return a*b;}
+
+//Q 3: what does the ...operator meand in parameter => Rest
+
+//Q 4:use rest operator to accept any number of scores and return total.
+
+// function GetTotalScore(...val){
+
+//     let sum=0;
+
+//     for(let i=0; i<val.length; i++){ //ahi i<=val.length nahi ave karan ke  apne loop length-1 chalvvanu chhe. 
+//         sum = sum + val[i];
+//     }
+
+//     return sum;
+// }
+
+// console.log(GetTotalScore(1,2));
+
+                // bijo tariko question 4 solve karva
+
+// function GetTotalScore(...score){
+
+//     sum=0;
+
+//     score.forEach(
+//         function(val){
+//             sum=sum+val;
+//         }
+//     )
+
+//     console.log("Total score is " + sum);
+
+// }
+
+// GetTotalScore(1,2,3,8,59);
+
+
+//Q 5: Crete Early return for this:
+//  function checkAge(age){
+//  if(age<18){
+//         console.log("Too young");
+//    }
+//    else{
+//         console.log("alowed");
+//    }
+//  }
+
+// function  checkAge(age){
+
+//     if(age==="") return "Please Enter Age";
+//     if(age<18) return "too young"; return "allowed";
+
+// }
+
+// console.log(checkAge(32));
+
+// Aisa function jo kuchh bhi return nahi kar raha called undefine
+
+//Q 6: What does it means when we says fucntion are first class citizens
+
+//it mean it vill trated has a value , fucntion ne variable ma store kari sakiye ,argument tarike pas kari sakiye
+
+// function print(message){
+//     console.log(message());
+// }
+// print(function(){
+//     return "hello";
+// });
+
+
+//Q:7: Can you assign a fucntion to a varibles and then call it ? Show How.
+
+    // let SayHello = ()=>{
+
+    //     return "Hello";
+
+    // }
+
+    // console.log(SayHello());
+
+// Q: 8: Pass a fucntion into another function and execute it inside.
+
+// function add(val){
+//     console.log(val() + 10);
+// }
+
+// add(function(){
+//     return 10;
+// }
+// )
+
+// Q:9: What is a heigher order fucntion
+//Which take a fucntion as a argument or return a fucntion called higher order fucntion 
+
+// condition 1: take fucntion as a argument
+
+// function Sum(val){
+
+//     console.log(val() + 10);
+
+// }
+
+// Sum(() =>{
+
+//     return 10;
+
+// });
+
+// condition 2 : return a function
+
+// function add(val){
+
+//     console.log("I am Add");
+
+//     return function(){
+//         console.log("Hello I am Parameter Fuction");
+//     }
+
+// }
+
+// add()();
+
+
+//Q 10: guss the output
+
+// function outer(){
+//     let count=0;
+//     return function(){
+//         count++;
+//         console.log(count);
+//     };
+// }
+
+// const counter = outer();
+// counter(); //1
+// counter(); //2
+
+// // output:
+
+// // 1
+// //2
+
+//Q 11: Convert the normal funcion into IIFE
+
+// (function inti(){
+//     console.log("Intialized");
+// })();
+
+
+//Q: 12: What is use of a IIFE ? Name of the real word use case
+
+//IIFE use for basically creates a private varible.
+
+// (function(){
+
+//     let score=100; // aaa varible intialized thai jase but we can not use out of this fucntion
+
+// })();
+
+//Hall haju getter seeter nathi chalyu but getter setter no example joto hoy to te niche mujab chhe
+
+
+// let sherry = (function(){
+
+//     let score = 0;
+
+//     return{
+
+//         getScore: function(){
+
+//             console.log(score);
+
+//         },
+
+//         setscore: function(val){
+
+//             score=val;
+
+//         }
+
+//     }
+
+// })();
+
+
+//output ma niche rite vaprvu: sherry.getScore(); sheery.setScore(20);
+
+//ama thase evu ke jo tame let a = sherry.getscore karsu to te return nai kare print j karse mate te perfectly private kahevay ane libraries avi j rite craetes thay 
+
+======Practise Fucntion=====
+
+1. Create a BMI Calculator
+
+    //Height in meters and waight in kg
+
+    function BMI(waight,height){
+
+    return waight + (height*height);
+    
+    }
+
+    console.log(BMI(10,1.2));
+
+    //jo tamare be point sudhi value joiti hoy to BMI(10,12).toFixed(2) karvu
+2. Create a reusable Discount Calculator (HOF style)
+
+// Create a reusable Discount Calculator (HOF style)
+
+function DiscountCalculator(Discount){
+    return function(price){
+        console.log(price - (price * (Discount/100)));
+    }
+}
+
+let Discount  = DiscountCalculator(10);
+Discount(200);
+Discount(900);
+
+3. Create a closure counter function
+
+function Counter(){
+    let Count = 0;
+    return function(){
+        Count++;
+        console.log(Count);
+    }
+}
+
+let C = Counter();
+
+for(i=1; i<=30; i++){
+
+    C();
+
+}
+
+// create a pure function to transform a value
+
+function Dobule(value){
+    console.log(value*2);
+}
+
+Dobule(12);
+
+
+============= 
+=Math Fucntions=
+
+
+//math.floor: -pachhad ni points vadi sankhya nikadi nichli sankhya batavse means jo 10.52 hase to 10 kari dese even bhale te 0.50 ni upar rahi
+
+//math.round:- 0.50 upar hase to upar ni sankhya apse niche hase to niche ni matlab 10.52 hase to 11 apse 10.12 hase to 10 apse
+
+//math.ceil:- hamesha upar no number apse evene 10.12 hase to 11 apse samjya
+
+//math.max : maximum value apse math.max(10,11);
+
+//math.min: minimum value apse math.min(10,22);
+
+//math.random() : 0 thi 1 ni vachhe random number generate karva mate
+
+            //jo 1 thi 100 vachhe joita hoy to niche no formula vapro
+
+            // console.log(Math.round(Math.random()*100));
+
+//math.sqrt(): squar root medvva console.log(Math.sqrt(4)) //2
+
+//math.pow(): console.log(Math.pow(4,3)); ==4*4*4=64
+
+//Math.abs(x): vlaue ne positive kare ex: console.log(Math.abs(-2)); //2
+
+//math.trunc(): decimal part remove not round figure use full in remove paise from money 
+
+
+============ Array==
+
+Array ma jo tame nai hoy te element ne call karso to udefined madse exampple:
+
+let arr = [20,30,40,50];
+arr[5]; //undefiend
+
+
+array banvva na tarika:
+
+let arr = new Array() and let a = [];
+
+array modification:
+
+a[2]=80;
+
+=============Practises Array==========
+
+// let arr = [2,5,3,4,1];
+
+// // arr.reverse(); reverse tha array
+
+// // arr.sort()//assending order
+
+// let sort = arr.sort((a,b)=>{
+//     //return b-a; //descening
+//     return a-b; //ascending
+// })
+
+// console.log(sort);
+
+// // sort hamesha ek fucntion accept karta hai jisme apko do values deni padti he 
+
+// // let newarr = arr.slice(0,3); //kaha se lena he kaha tak
+
+// // arr.shift()->peli value hatavva
+// // arr.pop=Remove last one
+// // arr.push(value); =enter a value at last
+// // arr.unshift(0); =enter a value at first
+
+// // arr.splice(2,1); kahase, kistni hatani he 
+
+// // arr.splice(1,4); //value le not a index
+
+// //let newarr = arr.slice(2,1); give a new return copy not change a array
+
+//For Each, Map , Filter , Reduce ==>All accepts a one fucntion funtction ma apn ne mainly(am to ghani made but important ek chhe) ek value made 
+
+//For each
+
+// let arr = [1,2,3,4,5];
+
+// arr.forEach(function(val){
+
+//     console.log(val+5);
+
+// })
+
+
+// Map Function - har bar ek ek bade par jate he aur kuchh return karta he
+
+// let arr = [1,2,3,4,5];
+
+//map sirf tab use karna jab apko ek naya array banana he piichhle array ke data basis par, map dikhte hi sath man me ek blank array banalo
+
+// let newarr = arr.map(function(val){
+
+//     return 12;
+
+// })
+
+// console.log(newarr); //output: 12,12,12,12,12
+
+//map foreach ki tarah hi he but return karna anivary  he jo return nahi karo to array ma jetla element hase teni jagya e undefined avse
+
+// let arr = [1,2,3,4,5];
+
+// let newarr = arr.map(function(val){
+
+//     if(val > 10) return val;
+
+// })
+
+// console.log(newarr);
+
+//Filter
+
+//naya array banata he, purane me se kuchh members lata he kuchh chhod deta he, return anivary, true ya false return kare
+
+// let arr = [1,2,3,4,5];
+
+// let newarr = arr.filter(function(val){
+    
+//     if(val>2){
+//         return true;
+//     }
+
+// })
+
+//Reduce
+
+// ek array se ek value banana ek bade array ko reduce karke ek value banana
+
+// let arr = new Array(1,2,3,4,5);
+
+// let ans = arr.reduce(function(accumalator,val){
+
+//     return accumalator + val;
+
+// },0); //ahi je 0 chhe te accumalator ni value chhe ane bar bar chlne par value yad rakhe,return value accumator ma jay
+
+// let arr = new Array(1,2,3,4,5);
+
+// let ans = arr.reduce(function(accumulator,val){
+
+//     return accumulator + val;
+
+// },0)
+
+// let arr = [1,2,3,4,1];
+
+// let find1 = arr.find(function(val){
+//     return  val===1; //paheli bar 1 mil jaye return hojao
+// });
+
+// let arr = [
+//     {
+//         id:1, key: 1
+//     },
+//     {
+//         id:2,key: 2
+//     },
+//     {
+//         id:3,key:3
+//     },
+// ];
+
+// let find = arr.find(function(val){
+//     return  val.key===1; //paheli bar 1 mil jaye return hojao
+// });
+
+
+// some
+
+// let arr=[10,1,3];
+
+// let any = arr.some(function(val){
+//     return val > 10;//array me koi aisa banda he jo codition satsified kar raha he 
+// })
+
+// every : every satisfied conditon return true , every not satisfie condition return false
+
+// let arr = [1,2,3,4,5];
+
+// let all = arr.every(function(val){
+//     return val>0; //true yes all val>0
+// })
+
+// array ni value ne bahar nikadva simple trick ane niche ni process ne distructuring pan kahevay chhe
+
+// let arr = [1,2,3,4]; 
+
+// let [a,b] = arr; //arr na pela be element bahar nikadsu
+
+// let [a,b,,d] = arr; //arr na pela be element bahar nikadsu, ane jo 3 nathi joto direct 4 joie chhe to aa rite lakhsu
+
+//SPREAD OP
+
+// let arr = [1,2,3,4];
+
+// let arr2 = arr; //avu karsu to arr no refrence madse apne evu nathi karvu real copy joie chhe to niche mujab kars
+
+// let arr2 = [...arr];//have arr2 ne change karso to arr change nathi thay
+
+//Array Practise
+
+
+// Q 1: Create an array with 3 fruits and print the second fruit
+
+// let fruits = ["Apple","Banana","Cherry"];
+
+// console.log(fruits[1]);
+
+                    //OR Using Diconstrucing Concept
+
+// let fruits = ["Apple","Banana","Cherry"];
+
+// [,B,] = fruits;
+
+// console.log(B);
+
+//Q 2: Add a Mango at the end and Pineapple at the beegining of this array; let fruits = ["Apple","Banana"];
+
+// let fruits = ["Apple","Banana"];
+
+// fruits.unshift("Pineapple");
+
+// fruits.push("Mango");
+
+// console.log(fruits);
+
+//Q 3: Replace banana with kiwi in the array : let fruits= ["Apple","Banana"];
+
+//  let fruits= ["Apple","Banana"];
+
+//  fruits[1] = "Kiwi";
+
+//  console.log(fruits);
+
+
+//Q:4 : what is diff beetween push and unshift
+
+//push : insert element at the end of a array
+//unshift: insert element at the start of array
+
+//Q:5 Removethe last item from this array using a method
+
+// let numbers = [1,2,3,4,5];
+
+// numbers.pop();
+
+// console.log(numbers);
+
+//Q:6: Insert "Red" and "Blue" at index 1 in this array
+
+//let colors = ["Green","Yellow"];
+
+// let colors = ["Green","Yellow"];
+
+// colors.splice(1,0,"Red","Blue"); //splice basically remove mate hoy kaha se kaha tak but tame kaha tak ma 0 apyu to tame add pan kari sako elements
+
+// console.log(colors);
+
+//Q:7: Extract only the middle four elements from this array
+
+// let items = [1,2,3,4,5,6];
+
+// let middleitems = items.slice(1,5);
+
+// console.log(middleitems);
+
+//Q 8: sort this array alphabatically and then revers it
+
+// let names = ["Zara","Arjun","Mira","Bhavya"];
+
+// names.sort().reverse();
+
+// console.log(names);
+
+// Q:9: use .map to square each number
+
+// let array = [1,2];
+
+// let result = array.map(function(val){
+
+//     return val*val;
+
+// })
+
+// console.log(result);
+
+// Q: 10: Use filter to keep numbers graeater than 10 
+
+// let array = [10,20,30,40];
+
+// let numbers = array.filter(function(val){
+
+//     if(val>10) return true;
+
+// })
+
+// console.log(numbers);
+
+// Q: 11 : use .reduce to fincd the sum of array
+
+// let array  = new Array(1,2,3,4,5);
+
+// let sum = array.reduce(function(accumlator,val){
+
+//     return accumlator + val;
+
+// },0);
+
+// console.log(sum);
+
+// 12. use .find to find the fisrt number less than 10
+
+// let arr = new Array(1,10,20,40,2,30);
+
+// let find = arr.find(function(val){
+//     if(val<10) return true;
+// })
+
+// 13. use .sum to check if any student has scored below 35
+
+// let score = [100,45,67,32,35,65];
+
+// let any = score.some(function(val){
+//     return val<35; 
+
+// })
+
+// 14. use every to check if all numbers are even
+
+// let arr = [10,20,40,50];
+
+// let all = arr.every(function(val){
+
+//     return val%2==0;
+
+// }) //".every() stops only when a callback returns FALSE.
+// If callback returns TRUE, it continues checking the next element.\
+
+// 15. Distructure this array to get first name and last name 
+
+// let fullname = ["Vishv","Patel"];
+
+// [first,last] = fullname;
+
+// console.log("First Name is " + first);
+// console.log("Last Name is " + last);
+
+// 16. Merge to arrays using spread op 
+
+// let a = [1,2];
+// let b = [3,4];
+
+// let c = [...a,...b];
+
+// 17. add india to the start of this array using spread 
+
+// let contries = ["USA","UK"];
+
+// contries = ["India", ...contries];
+
+
+// 18. clone array properly not by Reference
+
+// let arr = [1,2,3,4,5];
+
+// let newarr = [...arr];
+
+Confusions:
+
+splice - real array badlde
+slice - navo array ape
+
+sort fucntion array na elements ne string ma convert kari de chhe ane jo evu na karvu hoy to fucntion banavo je return kare eigher a-b or b-a
+// let sort = [100,3,2].sort(); //answer will be 100,2,3 which is wrong so we use below:
+
+let sort = [100,3,2].sort(function(a,b){
+return a-b;
+})
+
+================= Objects ===============
+
+obj banavvani rite
+
+let obj = {key:value,key:value};
+
+access karvani rit:
+
+obj["key"] or obj.key or let aa="name"; obj[aa] apne obj.aa nahi api sakiye karan ke interpreter pachhi direct aa nam ni property got chhe je object ma chhe j nai;
+
+
+// Nesting and deep accesing
+
+const user = {
+    name: "vishv",
+    address: {
+        city: "Patan",
+        pin: 384240,
+        location:{
+            lat: 23.2,
+            lng: 77.4
+        },
+    },
+};
+
+
+
+user.address.location.lng;//jo lng ma eror ave to smji levanu lng ma nai location ma eror chhe , karan ke bhluthi locations lakahi gayu hase to pan lng ma error btvse
+
+//Destructuring
+
+const user = {
+    name: "vishv",
+    address: {
+        city: "Patan",
+        pin: 384240,
+        location:{
+            lat: 23.2,
+            lng: 77.4
+        },
+    },
+};
+
+//Destructuring means manilo tamare varam var user.address.locatio.lng nathi lakhvu to apne niche mujab karsu
+
+let {lat,lng} = user.address.location; //scre breaket na use karva dhyn rakhvu
+
+//copying object: spread, Object.assign,deep clone
+//Optional chaining, computed propertys 
+
+
+
+//loops for-in,Object.keys,Object.entries
+
+// let obj = {
+//     name: "vishv",
+//     age: 20,
+//     email: "vishv123@gmail.com"
+// }
+
+//for-in loop
+
+// syntax: for(let key in objectname){}
+
+// for(let key in obj){
+//     console.log(key); //output: name,age,email
+//     console.log(obj[key]);//output you known also
+// }
+
+// let obj = {
+//     name: "vishv",
+//     age: 20,
+//     email: "vishv123@gmail.com"
+// }
+
+// let keys = Object.keys(obj); //object ni badhi keysne array ma nakhi de chhe ane retrurn pan kare chhe
+
+//Object.enntries(array of aray return);
+
+
+
+//copying object: spread, Object.assign,deep clone
+
+//copying objects using spread
+
+
+// let obj1 = {
+//     name: "Vishv",
+//     age: 20,
+//     email: "vishvpatel865@gmail.com"
+// };
+
+// let obj2 = {...obj1};
+
+//copying object using Object.assign
+
+// let obj1 = {
+//     name: "Vishv",
+//     age: 20,
+//     email: "vishvpatel865@gmail.com"
+// };
+
+// let obj2 = Object.assign({khana: dalchaval},obj1);
+
+
+//deep cloing - jab apka object copy hota he chahe using a spread if it is deep netsing then it is not really copy 
+
+//  let obj1 = {
+//      name: "Vishv",
+//      age: 20,
+//      email: "vishvpatel865@gmail.com",
+//      address: {
+//         village: "Ravad",
+//         Pin: 384240,
+//      }
+// };
+
+
+// JSON.stringify(obj); //Object ne String Ma convert AKri de
+
+// JSON.parse(string); //Stirng ne Object ma Fervi de
+
+
+// let obj2 = JSON.parse(JSON.stringify(obj1)); stringify thi string bani jay ane string ne parse kariye etle object ma convert thai jay te real values hoy reference na hoy
+
+//Optional chaining, computed propertys 
+
+//  let obj1 = {
+//      name: "Vishv",
+//      age: 20,
+//      email: "vishvpatel865@gmail.com",
+//      address: {
+//         village: "Ravad",
+//         Pin: 384240,
+//      }
+// };
+
+// obj?.address?.village;
+// // obj ma adreess exits kare chh ke nai village exist chhe ke nai e badhu kevay optional chaining
+
+//computed propertys
+
+// let Role = "Admin"; //Admin is a key
+
+// let obj1 = {
+//      name: "Vishv",
+//      age: 20,
+//      email: "vishvpatel865@gmail.com",
+//      address: {
+//         village: "Ravad",
+//         Pin: 384240,
+//      },
+//      [Role] : "No",//Role ni jagya e admin avse ane te avu dekhase : Admin:no
+// };
+
+
+// =================== Pratcisess of objects =================
+
+//Create a Object of Student with name , age, and IsEnrolled.
+
+// let student  = {
+//    name: "vishv",
+//    age: 20,
+//    IsEnrolled: true,
+// };
+
+//Can an Object Key be a number or boolean ? try this
+
+// const obj = {
+
+//    true: "yes",
+//    42: "answer"
+
+// };
+
+// console.log(obj[true]);
+
+//Yes , Key Can be Boolean or number
+
+//Acces the Value of First Name from this object
+
+// const user = {
+//    "first-name": "Harsh",
+// };
+
+// console.log(user["first-name"]);
+
+//Given a dynamic key let key = "age", how will you access user[key];
+
+// let key = "age";
+
+// const user = {
+//    age: 21,
+// };
+
+
+// console.log(user[key]);
+
+
+// //from the object  below print the latitude
+
+// const locations = {
+
+//    city: "Bhopal",
+//    cordinates: {
+//       lat: 23.2,
+//       lng: 77.4
+//    },
+// };
+
+// console.log(locations.cordinates.lat);
+
+// What happened if coordinates is missing ? how you can prevent errors
+
+//using optional chaining
+
+//locations?.coordinates?.lat
+
+//Desturcture the city and latfrom the above location objects
+
+// const locations = {
+
+//    city: "Bhopal",
+//    cordinates: {
+//       lat: 23.2,
+//       lng: 77.4
+//    },
+// };
+
+// let {city} = locations;
+// let {lat} = locations.cordinates;
+
+// console.log(city);
+// console.log(lat);
+
+//Destrucuture the fisrtname form the obj object and store it variable name name
+
+// let obj = {
+
+//    "first-name": "vishv",
+
+// };
+
+// let {"first-name": name} = obj;
+
+//use for in to log all keys in this objects
+//  let obj = {
+
+//    "first-name": "vishv",
+//    "name": "Ram"
+
+// };
+
+// for(key in obj){
+//    console.log(key);
+// }
+
+// use Object.entries to print all key valur pair as:
+
+
+// let obj = {
+//    name: "vishv",
+//    age: "20"
+// };
+
+// console.log(Object.entries(obj).forEach(function(val){
+//    console.log(val[0] + ":" + val[1]);
+// }));
+
+
+
+=============== DOM ========================
+
+DOM - DOCUMENT OBJECT MODEL 
+
+DOM THE STRUCTURE : NODE, ELEMENT, TEXT , COMMENT
+
+SELECTING ELEMENTS: GETELEMENTBYID, GETELEMENTBYCLASSNAME, QUERYSELECTOR, QUERYSELECTORALL
+
+BODY == DOM MANLO 
+
+DOM MANIPULATION : - CHANGE(MANIPULATION) DOM
+
+// 1. Id Selector 
+
+
+// let text = document.getElementById("text");
+
+// console.dir(text); //With Propertys get object like h1#text>
+
+// console.log(text); //Without Property get object Like <h1 id="text">ABCD</h1>
+
+// 2. class Selector
+
+// let text  = document.getElementsByClassName("text");
+
+// console.dir(text); print a arry like structure beacuse it can contain multiple child  elements we can access lik text[0];
+
+// 3. document.querySelector
+
+// let fisrth1 = document.querySelector("h1"); //kisi bhi ek element ko select kar sakte ho 
+// //aur ye pahle hi slect karta he 
+
+// console.log(fisrth1);
+
+
+// 4. queryselectorall
+
+// let allh1 = document.querySelectorAll("h1");
+
+// console.log(allh1); //badaha h1 select karse ane nodelist banavse
+
+
+// ==========================Manipulation-===========
+
+// let hello = document.querySelector("h1");
+
+
+// // heni value badlvi hoy teni pela object print kari property check kari badlo - easy way jem ke let = hello = document.getElementsByTagName("h1"); avu chhe to console.log(hello); == aa object print karse na kare to console.dir(hello) akro 
+
+// hello.textContent = "Vishv Patel";//textbadle
+// hello.innerText= "Vihv Patel";//text badle
+// hello.innerHTML = "<strike>Hello</strike>";//html nakhe 
+// hello.hidden = true;        
+
+// ==============Attribute Manipulation ======================
+
+// get attribute, setattributes and removeattribute
+
+// 1. Set Attribute
+
+// let a = document.querySelector("a");
+
+// console.log(a);
+
+// // a.href="www.sheryians.com/"; 
+
+// a.setAttribute("href","www.google.com");
+
+// 2 Get attribute
+
+// let a = document.querySelector("a");
+
+// console.log(a);
+
+// a.setAttribute("href","www.google.com");
+
+// console.log(a.getAttribute("href"));
+
+// 3. removeattribute
+
+// let a = document.querySelector("a");
+
+// console.log(a);
+
+// a.setAttribute("href","www.google.com");
+
+// console.log(a.getAttribute("href"));
+
+// a.removeAttribute("href");
+
+// =====================Dynamic Dom manipulation =================
+
+// createElement, appendchild, removechild, preped(kisielementkisaruatmekuchhaddkaran) ;
+
+// let h1 = document.createElement("h1");
+
+// h1.textContent= "hello ji";
+
+// document.body.append(h1);
+
+// h1.style.color = "red";
+
+//======================style dom ==========
+
+// let h1 = document.createElement("h1");
+
+// h1.textContent= "hello ji";
+
+// document.body.append(h1);
+
+// h1.style.color = "red";
+
+// h1.style.background = "green";
+
+
+// =========== class dom =========
+
+// let h1  = document.querySelector("h1");
+
+// console.log(h1);
+
+// // h1.classList = "bgcolor"; 
+// // OR
+// h1.classList.add("bgcolor");
+// h1.classList.remove("bgcolor");
+// h1.classList.toggle("bgcolor"); //jo class lagel hase to hatavi dese ;; nai lagel hoy to add kari dese 
+
+
+// =========================PRACTISE FIRST PART(DOM)
+
+// WHAT IS A DOM ? DOM IS TREE LIKE STRUCTURE ,BODY AND HTML AND ALL CONTENT ARE DOM
+//HOW IT REPERESENT THE HTML STRUCTURE ?REPRESENT ALL AS A NODE AND IT IS A TREE
+
+//NAME THE TYPES OF NODS IN DOM TREE: ELEMENT NODE,TEXT NODE, COMMENT NODE,NODE
+
+//WHAT A DIFFERENCE BEETWEEN A ELEMENT NODE AND TEXT NODE
+//ELEMENT NODE IS A ATCUAL HTML TAG AND ITS TEXT WILL BE A TEXTNODE LIKE <P>HELO</P>HERE P IS, ELEEMENT NODE AND HELO IS TEXT NODE.
+//element node ka children node ho sakta he lekin text node ka child node nahi hota like we can write <p>Hello<b>vishv</b></p>here b is child node
+
+//getelementbyid and queryselector diffrenece
+
+// getelementbyid : id nu sign na ladvu Pade , use for slect only id, 
+// queryselector: id nu sign jove j , use for select multiple thing
+
+// What does getelementbyclassname return ?is it a array?
+//it is return a html collection list which look very very similar to array but it not a array
+
+//select all li elements and print their text using loop.
+
+// <ul>
+//     <li>Hello1</li>
+//     <li>Hello2</li>
+//     <li>Hello3</li>
+//     <li>Hello4</li>
+//     <li>Hello5</li>
+// </ul>
+
+// let list  = document.querySelectorAll("li");
+
+// list.forEach(function(val){{
+//     console.log(val.textContent);
+// }})
+
+//diff: textcontent and innertext
+
+//innertext: not change the hidden element text, textcontent change hidden element text, innertext slower and older, textconet is faster 
+
+// ==========Event Handling ===========
+
+//Image Swaper
+
+//Html
+
+//   <img src="https://images.unsplash.com/photo-1763411711221-40166c5e20cd?q=80&w=1493&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image1" id="img1">
+
+//     <img src="https://plus.unsplash.com/premium_photo-1667354097023-4b8d9c3f7767?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Iamge2" id="img2">
+
+//     <button>Swap Iamge</button>
+
+//js
+
+// let img1 = document.querySelector("#img1");
+// let img2 = document.querySelector("#img2");
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", function () {
+//     let temp = img1.src;
+//     img1.src = img2.src;
+//     img2.src = temp;
+// }); 
+
+// let txt = document.querySelector("input");
+// let ul = document.querySelector("ul");
+// let btn = document.querySelector("button");
+
+// // Create only ONE error element in advance
+// let err = document.createElement("p");
+// err.style.color = "red";
+
+// btn.addEventListener("click", function () {
+
+//     // IF VALUE EXISTS → ADD ITEM
+//     if (txt.value.trim() !== "") {
+
+//         // remove previous error if exists
+//         if (document.body.contains(err)) {
+//             document.body.removeChild(err);
+//         }
+
+//         let li = document.createElement("li");
+//         li.textContent = txt.value;
+//         ul.appendChild(li);
+
+//         txt.value = "";   
+//     }
+//     // IF VALUE EMPTY → SHOW ERROR
+//     else {
+//         err.textContent = "Please Enter Item Name First";
+
+//         // show error only once
+//         if (!document.body.contains(err)) {
+//             document.body.appendChild(err);
+//         }
+//     }
+// });
+
+
+
+
+
+// ==========Event Handling ===========
+
+// Event: kuchh action hua 
+
+//Event Listener: Event listen karke reacion dena
+
+//select the element fisrt , 
+
+// Remove EVENT LISTENER 
+
+// let p  = document.querySelector("p");
+
+// function mouseover(){
+//     p.style.color = "red";
+// }
+
+// p.addEventListener("mouseover",mouseover);
+
+// p.removeEventListener("mouseover",mouseover);
+
+
+///live text changer
+
+// let input = document.querySelector("input");
+
+// let p = document.createElement("p");   
+// p.style.color = "white";
+// document.body.append(p);
+
+// input.addEventListener("input", function () {
+//     p.textContent = input.value;   
+// });
+// let cb = document.querySelector("input[name='cb']");
+// let pass = document.querySelector("input[name='pass']");
+// let cpass = document.querySelector("input[name='cpass']");
+// let h4 = document.querySelector("h4");
+
+// cb.addEventListener("change", function(){
+//     if(cb.checked){
+//         cpass.value = pass.value;
+//         pass.addEventListener("input", sync);
+//     } else {
+//         cpass.value = "";
+//         pass.removeEventListener("input", sync);
+//     }
+// });
+
+// function sync(){
+//     cpass.value = pass.value;
+// }
+
+//Change Event
+
+// let h4 = document.querySelector("h4");
+
+// let select = document.querySelector("select");
+
+// select.addEventListener("change",function(evtdata){
+
+//         console.log(evtdata.target.value);
+//         h4.textContent = `Phone Selected ${evtdata.target.value}`;
+
+// })
+
+// let h1 = document.querySelector("h1");
+
+// window.addEventListener("keydown",function(evtdetails){
+    
+
+//     if(evtdetails.key === " "){
+//         h1.textContent = "spc";
+//     }
+//     else{
+//     h1.textContent = evtdetails.key;}
+
+
+// })
+
+// html :
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>JS PART 1</title>
+//     <style>
+//         * {
+//             margin: 0;
+//             padding: 0;
+//             box-sizing: border-box;
+//             font-family: 'Lucida Sans';
+//         }
+        
+//         html,body{
+//             height: 100%;
+//             width: 100%;
+//         }
+        
+//         #main {
+//             height:100%;
+//             width:100%;
+//             background-color: #222;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+
+            
+//         }
+
+//         input{display: none;}
+
+//         #btn{
+//             padding: 15px 30px;
+//             background-color: rgb(24, 152, 116);
+//             border-radius: 5px;
+//             color: white;
+//             cursor: pointer;
+//         }
+
+//         #btn:hover{
+//             background-color: rgb(39,110,100);
+//         }
+        
+//     </style>
+// </head>
+// <body>
+
+//     <div id="main">
+
+//         <input type="file">
+//         <div id="btn">Upload File</div>
+
+//     </div>
+
+
+//     <script src="./script.js"></script>
+// </body>
+// </html>
+
+// //js
+
+// let btn = document.querySelector("#btn");
+
+// let file = document.querySelector("input");
+
+// btn.addEventListener("click",function(){
+
+//     file.click();  
+
+// })
+
+// file.addEventListener("change",function(details){
+
+//     const file = details.target.files[0];
+
+//     if(file){
+//         btn.textContent = file.name;
+//     }
+
+// })
+
+// =============== Submit ======================
+
+// let form = document.querySelector("form");
+// let inputs = document.querySelectorAll("input");
+
+// form.addEventListener("submit", function (evtdetails) {
+//     evtdetails.preventDefault();
+
+//     for (let i = 0; i < inputs.length; i++) {
+//         console.log(inputs[i].value);
+//     }
+// });
+
+
+
+
+====key event===
+
+You said:
+Diffrenece beetween clientx and screenx in js
+ChatGPT said:
+Here is the simple & clear difference between clientX and screenX in JavaScript (mouse / touch events):
+
+⭐ Difference (Very Simple)
+clientX
+Measures X-position relative to the viewport (visible part of the browser).
+
+Does NOT include browser toolbars, address bar, or OS taskbar.
+
+👉 Think: Browser window (inside area).
+
+screenX
+Measures X-position relative to the entire screen.
+
+Includes everything: monitor screen starting from the top-left corner.
+
+👉 Think: Full monitor screen.
+
+🖼 Quick Example
+If your monitor starts at X = 0
+And your browser window starts at X = 100 (because of OS/taskbar/position):
+
+screenX = 150
+
+clientX = 50
+(because pointer is 50px from inside the browser window)
+
+✔ Small Code Example
+window.addEventListener("click", function (e) {
+    console.log("clientX:", e.clientX); // inside browser window
+    console.log("screenX:", e.screenX); // whole monitor
+});
+📚 Reputable Source References
+MDN Web Docs (Most Trusted Source)
+clientX → https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX
+
+screenX → https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/screenX
+
+These pages clearly explain how both properties work.
+
+If you want, I can also explain clientY vs screenY, pageX/pageY, or make a diagram for easier understanding.
+
+You said:
+diffreenece beetween keyup , keydown and keypres
+ChatGPT said:
+Here is the simple, clean, interview-level difference between keydown, keyup, and keypress — with correct meaning and trusted source links.
+
+⭐ Key Difference (Very Easy)
+1️⃣ keydown
+Fires when a key is pressed down.
+
+Happens first.
+
+Works for all keys (letters, numbers, Ctrl, Shift, Arrow keys, etc.).
+
+👉 Runs as soon as you start pressing a key.
+
+2️⃣ keypress
+(Deprecated — no longer recommended)
+
+Fires while a key is being pressed, but only for character keys (a, b, 1, space).
+
+Does NOT work for non-character keys (Shift, Ctrl, Arrow keys).
+
+Modern browsers discourage using it.
+
+👉 Use keydown/keyup instead (industry standard).
+
+3️⃣ keyup
+Fires when you release the key.
+
+Happens after keydown → keypress → keyup sequence.
+
+-====for checking key ====
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+window.addEventListener("keydown", () => console.log("DOWN"));
+window.addEventListener("keypress", () => console.log("PRESS"));
+window.addEventListener("keyup", () => console.log("UP"));
+</script>
+
+</body>
+</html>
+
+=========== Event Objets===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    //  Event Object: Target, Type,PreventDefault 
+
+    //Event Object
+
+    // let abc = document.querySelector("#abc");
+
+    // abc.addEventListener("click",function(details){
+
+    //     //here details is a event object
+
+    // })  
+
+    // //Event Target
+    
+    // let abc = document.querySelector("#abc");
+
+    // abc.addEventListener("click",function(details){
+
+    //     // target means wo banda jispe actual event hua 
+    //     //console.log(details.target);
+
+    // })
+
+    // //Event Type
+    
+    // let abc = document.querySelector("#abc");
+
+    // abc.addEventListener("click",function(details){
+
+    //     // target means wo banda jispe actual event hua 
+    //     //console.log(details.target.type);
+    //type means what type of event occure
+
+    // })
+
+    //Prevent Default: → Stops the browser’s default behavior for that event.
+
+    //form na conept ma reaload thata atkave chhe submit tahta nai
+</script>
+</body>
+</html>
+
+============    Event Bubbling and Capturing ==========
+
+jab bhi aap click karte ho ya koi event raise karte ho to aapka event flow do phase me chalta hai:
+
+phase 1: event top elemnt se niche ki taraf jayega - capturing
+phase 2: event raised elemnt se parent ki taraf jayega - bubling
+
+aur pahle phase 1 hoti he
+
+//Event Bubbling
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        
+        main {
+            height:100%;
+            width:100%;
+            background-color: #222;
+        }
+        
+        nav{
+            height: 80px;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+        }
+
+        nav button{
+            padding: 11px 22px;
+            background-color: red;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <button>Click and follow</button>
+        </nav>
+    </main>
+
+    <script>
+
+        //jispe event ayega agar uspe listener nahi hua to hamara event uske parent par listener dhundhega aur aisaa karte karte upar badhega
+
+        let nav = document.querySelector("nav");
+
+        nav.addEventListener("click",function(){
+            alert('alert'); //buton par pan kam karse link par pan kam karse karan ke button pase event listener nathi
+        })
+
+    </script>
+</body>
+</html>
+
+=============== Now make something using Event bubbling =========
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lt{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li>Apple</li>
+        <li>Grapes</li>
+        <li>Dates</li>
+        <li>Pinaaple</li>
+        <li>Banana</li>
+    </ul>
+
+    <script>
+
+        let ul = document.querySelector("ul");
+
+        ul.addEventListener("click",function(details){
+            details.target.classList.toggle("lt");
+        })
+
+    </script>
+</body>
+</html>
+
+============== Event Capturing ==================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{height: 200px;width: 200px;background-color:red;}
+        .b{height: 40%;width: 40%;background-color:blue;}
+    </style>
+</head>
+<body>
+    
+    <div class="a">a
+        <div class="b">b
+            <button>Click me </button>
+        </div>
+    </div>
+
+    <script>    
+    //Jaha bhi kisi event ko occure kiya patter upar se niche ki taraf ayega
+
+    //bubble ma evu hoy ke evenlistener lagel hoy top pan tenu to chalve ane jo tena parent par lagel hoy to tenu pan chalave pela potanu chalave ane pachhi parent nu pan chalave
+
+    //event capturing bubling thi undhu
+
+    let a = document.querySelector(".a");
+    let b = document.querySelector(".b");
+    let button = document.querySelector("button");
+
+    a.addEventListener("click",function(){
+        alert('a clicked');
+    },true)   
+    b.addEventListener("click",function(){
+        alert('b clicked');
+    })    
+    button.addEventListener("click",function(){
+        alert('button clicked');
+    })
+
+    
+
+    //capture phase means pela a ni eventlis chalse pachhi b ane pachhi button ;;; pan a bydefalu bandh hoy chhe chlau karva karli braces ni just agad true lakhvu pade,have capture pahse chaekc thase a par true chhe to a chalse b mate check tahse nathi , to button chalse, pachhi b chalse
+
+
+
+    </script>
+
+</body>
+</html>
+
+================ Live character Count ============
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Character Counter</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Write Anything">
+
+    <h4>Characters left: <span>20</span></h4>
+
+    <script>
+
+        let input = document.querySelector("input");
+
+        let span = document.querySelector("span");
+
+        input.addEventListener("input",function(details){
+            
+            let left = 20 - input.value.length;
+            span.textContent = left;
+
+            
+            if(left < 0){
+                span.style.color = "red";
+            }else{
+                span.style.color = "black";
+            }
+        })
+        
+    </script>
+</body>
+</html>
+
+====================== FORM AND FORM VALIDATIONS ==============
+
+REJAX CODE FOR VALIDATION 
+
+
+================ Time And Intervals ========
+
+
+       // setTimeout(function(){
+
+        //     alert('Hello ');
+
+        // },1000); //1 second ke bad chalega
+        //
+
+        setInterval(function(){
+
+            alert('Hello ');
+
+        },2000); //har ek 1 second ke bad chalega har ek second ke bad ek bar chalega
+
+        =============== Progress Bar ===========
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+
+        body{background-color: #1E1E1E;}
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightcoral;
+            height: 250px;
+            width: 200px;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        .card__title{
+            font-size: 20px;
+            font-family: 'Courier New';
+        }
+
+        .progress-box{
+            height: 10px;
+            width: 90%;
+            border-radius: 30px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .progress-fill{
+            width:0%;
+            background-color: red;
+            height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <h2 class="card__title" id="down">Download File</h2>
+
+    <div class="progress-box">
+        <div class="progress-fill"></div>
+    </div>
+
+        <h2 class="card__title" id="percentage">0% </h2>
+
+        <button>Download Now</button>
+
+    </div>
+
+    <script>
+
+        let btn = document.querySelector("button");
+        let progress = document.querySelector(".progress-fill");
+        let percentage = document.querySelector("#percentage");
+        let down = document.querySelector("#down");
+
+        btn.addEventListener("click",function(){
+
+        down.textContent = "Downloading..."
+
+        let count = 0;
+
+        let ineterval = setInterval(function(){
+
+            if(count<100){
+            
+            count++;
+
+            progress.style.width = count + "%";
+
+            percentage.textContent = count + "%";
+
+            }
+            else{
+                down.textContent = "Downloaded";
+                clearInterval(ineterval);
+            }
+
+        },10000/100);
+        })
+
+        
+
+    </script>
+</body>
+</html>
+
+====================== Cookie ====
+
+document.cookie = "name: vishv";
+
+localsoratge me array , object vagera sroee nahi kar sakte isliye unhe stringyfy karke store karana padta he and jab use karna ho tab parse karna padta he 
+
+parse mili hui string ko karna he naki freinds ko
+
+like '["vishv","Ram"]' ==isko parse karan padega
+
+
+==========Why always Locla storage stores strings======
+
+so that local storage api built for string 
+
+========== BONUS PRACTISE QUTIONS ===========

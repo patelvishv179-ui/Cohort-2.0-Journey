@@ -1,0 +1,56 @@
+//Level 1: Pure Beginner
+
+    Print number from 1 to 10
+
+    Print only even numbers from 1 to 20
+
+    Print numbers from 10 to 1
+
+    Print the "Yes" word Five Times
+
+    Print Whether the numbers from 1 to 10 are even or odd numbers
+
+    Ask Users for a number and say if it's Porsitive or negative
+
+    Ask user's age and check for it is eligible for vote or note
+
+    Print anyone multiplication table
+
+     Count how many numbers between 1 and 15 are greater than 8
+Loop and count conditionally.
+
+
+    Ask user for password and print access status
+Hardcoded correct password. Compare with user input.
+
+Level 2 – Slightly Tougher but Logical
+
+    Allow only 3 attempts to enter correct password
+If user gets it right early, stop. If not → “Account locked”
+
+    Ask user for words until they type “stop”. Count how many times they typed “yes”
+Loop until "stop" is typed. Count "yes"
+
+    Print numbers divisible by 7 from 1 to 50
+//ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+
+// Ask the user to enter numbers repeatedly until they type -99.
+// Find and print:
+// The largest number entered
+// The smallest number entered
+// Conditions:
+// -99 is only a stop signal and must not be considered in comparison
+// At least one valid number will be entered before -99
+// Numbers can be positive or negative
+
+// Ask the user to enter numbers one by one until they type 0.
+// Calculate and print:
+// The sum of all even numbers
+// The count of odd numbers
+// Conditions:
+// Loop stops only when 0 is entered
+// 0 should not be counted as even
+// Negative numbers are allowed
+// Input is taken repeatedly from the user
+    

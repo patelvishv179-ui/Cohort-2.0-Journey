@@ -1,0 +1,413 @@
+    @font-face {
+        font-family: font;
+        src: url(./HeaderFont.ttf);
+    }
+
+    @font-face {
+    font-family: font3;
+    src: url(./HelveticaNowDisplay-Light_M4nzWhve6k.ttf);
+}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+
+    main{
+
+        height: 100%;
+        width: 100%;
+        background-color: #111;
+
+    }
+
+    nav{
+
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        /* background-color: red; */
+        align-items: center;
+
+    }
+
+    .left{
+
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+    }
+
+    .left h4{
+        color: white;
+        font-family: font;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    .left img{
+
+     
+        height: 45px;
+        width: 35px;
+
+    }
+
+    .right{
+
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        align-items: center;
+
+    }
+
+    .right h4{
+
+        color: white;
+        font-size: 16px;
+        font-family:font;
+        font-weight: 400;
+
+    }
+
+
+    .ri-notification-4-fill{
+
+        font-size: 20px;
+        
+    }
+
+    .right h5{
+
+        display: none;
+        font-size: 20px;
+        color: white;
+        padding-right: 8px;
+        cursor: pointer;
+    }
+
+    .chohrot{
+
+    /* 
+        height: 600px; */
+        width: 92%;
+        /* background-color: rgb(35, 15, 114); */
+        display: flex;
+        margin: 80px auto;
+        justify-content: space-between;
+    }
+
+    .chohrot .left{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+        /* background-color: rgb(57, 58, 59); */
+
+    }
+
+    .block{
+
+        width: 500px;   
+
+    }
+
+    #eightthirty{
+
+        font-size: 17px;
+        color: white;
+        
+
+    }
+
+    .block h4{
+
+        background-color: #212121;
+        display: inline-block;
+        /* border: 1px solid white; */
+        padding: 12px 20px;
+        border-radius: 5px;
+
+    }
+
+
+    .chohrot .left h1{
+
+        font-size: 40px;
+        font-family: "Hanken Grotesk", sans-serif;
+        color: white;
+        font-weight: 500;
+
+    }
+
+    .chohrot-right{
+
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 15px;
+        overflow: hidden;
+
+    }
+
+    .chohrot-right h4{
+
+        background-color: #212121;
+        display: inline-block;
+        /* border: 1px solid white; */
+        padding: 12px 20px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+        width: 300px;
+        font-size: 20px;
+        font-family: "Hanken Grotesk", sans-serif;
+        word-spacing: 2px;
+
+    }
+
+    .chohrot-right .bottom-right{
+
+
+        flex-wrap: wrap;
+        background-color: #1E1E1E;
+        display: flex;
+        width: 680px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 45px 35px 30px;
+
+    }
+
+    span{
+
+        color: #23c182;
+        font-weight: 400;
+
+    }
+
+    .chohrot-right img{
+
+        height: 400px;
+        width: 680px;
+           cursor: pointer;
+
+    }
+
+
+
+    @media (max-width: 550px) {
+        
+        nav{
+
+            /* background-color: red; */
+            padding: 10px 10px;
+
+        }
+
+        .left img{
+
+            height: 38px;
+            width: 28px;
+
+        }
+
+        .left h4{
+
+            font-size: 14px;
+
+        }
+
+        .right h4{
+
+            display: none;
+            
+        }
+
+        .right h5{
+
+            display: block;
+            font-size: 20px;
+
+        }
+
+        .chohrot .left{
+
+            margin-top: -60px;
+
+        }
+
+        .chohrot .left h1{
+
+            font-size: 28px;
+            /* text-align: center;   */
+
+        }
+
+
+    }
+
+    .price{
+
+        margin-top: 20px;
+
+    }
+
+    .price h2{
+
+        color: white;
+        font-family: font;
+        font-size: 30px;
+
+    }
+
+    #realprice{
+
+        color: #23c182;
+        font-size: 32px;
+
+    }
+
+    strike{
+
+        color: #656464;
+        font-size: 26px;
+        font-weight: 800;
+
+    }
+
+    #gst{
+
+        color: white;
+        font-weight: 500;
+        font-size: 26px; 
+        font-family: "roboto";
+
+    }
+
+    .price h4{
+
+        margin-top: 4px;
+        font-size: 20px;
+        color: #13cd82;
+        font-weight: 400;
+        font-family:  "Comic Relief", system-ui;
+
+    }
+
+    .buttons{
+
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+
+    }
+
+    .buttons button{
+
+        background-color: #13cd82;
+        padding: 15px 45px;
+        font-family: "roboto";
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    
+    }
+
+    #btnview{
+
+        background-color: #656464;
+
+    }
+
+    .enroll h4{
+
+        margin-top: 8px;
+        font-size: 20px;
+
+    }
+
+    #getplaced{
+
+        background-color: #101010;
+        text-align: center;
+        padding: 20px;
+
+    }
+
+
+
+
+    
+
+.placed {
+
+    padding-top: 20px;
+    position: relative;
+
+}
+
+.placed h1{
+
+
+    font-size:150px;
+    font-family: font3;
+    background: url(https://ik.imagekit.io/sheryians/Aptitude%20&%20Reasoning/bloomMask%20Large_lvwFbM14_l.png);
+    background-clip: text;
+    color: transparent;
+    font-weight: bolder;
+    background-size: cover;
+    /* position: relative; */
+
+
+}
+
+.placed h1.bloom{
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    filter: blur(80px);
+    /* z-index: -1;    */
+    
+
+}
+#withjob{
+
+    margin-top: 10px;
+    font-family: font3;
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+
+}
+
+#group{
+
+    margin-top: 100px;
+    height: 300px;
+    cursor: pointer;
+
+}
+
+::-webkit-scrollbar{
+
+    display: none;
+
+}
+

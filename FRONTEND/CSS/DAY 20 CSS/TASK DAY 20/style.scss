@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+
+    section{
+
+        height: 100%;
+        border: 1px solid black;
+        flex-grow: 1;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;   
+        background-position: center;
+        cursor: pointer; 
+
+        &:hover{
+
+            flex-grow: 2.5;
+            transition: flex-grow 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);   
+
+        }
+    
+        h1{
+            color: white;
+            font-family: system-ui;
+            font-weight: 400;
+        }
+    
+    } 
+
+    section:nth-child(1){
+
+        background-image: url("https://images.unsplash.com/photo-1763162944506-ee1fbaf5a733?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+
+    section:nth-child(2){
+
+        background-image: url("https://plus.unsplash.com/premium_photo-1669725687338-7a68f0d58227?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+    }
+
+    section:nth-child(3){
+
+        background-image: url("https://images.unsplash.com/photo-1574068468668-a05a11f871da?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+    }
+
+    section:nth-child(4){
+
+        background-image: url("https://images.unsplash.com/photo-1568265112889-c9d3fc50a281?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+    }
+
+    section:nth-child(5){
+
+        background-image: url("https://plus.unsplash.com/premium_photo-1678052582115-a36e6258a523?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+    }
+
+}
+

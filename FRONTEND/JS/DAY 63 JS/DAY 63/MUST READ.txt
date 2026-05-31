@@ -1,0 +1,59 @@
+api key ma q pela weather lakhvu jaruri chhe
+
+
+// ====================== apne api mathi j direct celcius value levi hoy to  ====
+//direct nicheno url lakhisakiye jema faky units=metric add karelu chhe jethi temprature celsious ma madse
+// https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=metric
+//By default temprature ni value kelvin ma madse
+
+=====================
+
+જ્યારે એક Promise નો result બીજા Promise ને જરૂરી ન હોય, ત્યારે j  Promise.all() વાપરવું. jem ke
+case 1
+getUser()
+getOrders(user.id) - ahi promis na vaprvu
+
+case 2
+getWeather() - ahi chale
+getNews()
+
+== PROMISE VADA NA QUESTION NO FLOW -=====
+
+SEND EMAILS CALL THASE.
+
+EMAILS PAR MAP FUNCTION CHALSE JE DAREK EMAIL PAR CALLBACK FUNCTION EXECUTE KARSE.
+
+DAREK EMAIL MATE:
+
+sendEmail(email)
+    .then(msg => msg)
+    .catch(err => err)
+
+RETURN THASE.
+
+DHYAN RAKHJO KE AHI PROMISE RESOLVE NATHI THAYU, FACTORY PROMISE RETURN THAYO CHHE.
+
+MAP FUNCTION BADHA RETURN VALUES NO NAVO ARRAY BANAVSE.
+
+ETLE allresponses MA AAVSE:
+
+[
+ Promise,
+ Promise,
+ Promise
+]
+
+HAVE Promise.all(allresponses) BADHA PROMISE COMPLETE THAY TYA SUDHI WAIT KARSE.
+
+BADHA PROMISE NA FINAL RESULTS BHAGA KARI EK ARRAY BANAVSE.
+
+await Promise resolve થાય ત્યાં સુધી રાહ જુએ છે
+અને resolve થયેલી value આપે છે.
+
+ETLE ans MA AAVSE:
+
+[
+ "Success",
+ "Failed",
+ "Success"
+]

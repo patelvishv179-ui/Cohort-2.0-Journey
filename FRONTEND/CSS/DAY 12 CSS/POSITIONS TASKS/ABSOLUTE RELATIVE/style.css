@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+
+    height:400px;
+    width: 400px;
+    background-color: aquamarine;
+    position: relative;
+
+}
+
+#item{
+
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
+    padding: 50px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+}

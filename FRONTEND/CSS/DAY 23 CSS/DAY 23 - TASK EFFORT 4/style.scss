@@ -1,0 +1,434 @@
+@font-face {
+  font-family: RobotoMono;
+  src: url("./Assets/RobotoMono.woff2");
+}
+
+@font-face {
+  font-family: Chillax;
+  src: url("./Assets/Chillax.woff");
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("./Assets/Satoshi.woff");
+}
+
+@mixin font-style($fsize, $ffamily, $fweight, $fcolor) {
+  font-size: $fsize;
+  font-family: $ffamily;
+  font-weight: $fweight;
+  color: $fcolor;
+}
+
+@mixin flex-style($fstyle: row, $fgap) {
+  display: flex;
+  flex-direction: $fstyle;
+  gap: $fgap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+// html {
+//   font-size: clamp(2rem, calc(3vw + 1rem), 16px); // ✔ FIXED
+// }
+
+body {
+  background-color: #121212;
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+
+  header {
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+
+    .header_leftnav {
+      h1 {
+        @include font-style(1.2rem, "Chillax", 100, whitesmoke);
+        transform: translate(8px, 3px);
+      }
+    }
+
+    .header_rightnav {
+      display: flex;
+      gap: 0.6rem;
+
+      button {
+        @include font-style(0.9rem, "RobotoMono", 400, whitesmoke);
+        display: none;
+        padding: 0.5rem 1.3rem;
+        background-color: #1e1e1e;
+        border: none;
+        outline: none;
+        border-radius: 0.2rem;
+        cursor: pointer;
+      }
+
+      #header_rightnav_cartbtn_icon {
+        @include font-style(1rem, "Satoshi", 200, black);
+        padding: 0.1rem 0.5rem;
+        background-color: #cebd63;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      #header_rightnav_gitbtn {
+        background-color: #cebd63;
+        color: black;
+        border-radius: 0.4rem;
+        height: 3.1rem;
+      }
+
+      #header_rightnav_gitbtn:hover {
+        background-color: #b1a462;
+      }
+
+      #header_rightnav_cartbtn {
+        display: block;
+      }
+
+      #header_rightnav_menuicon {
+        display: block;
+        border: 0.1rem solid #1f1d1d;
+        color: whitesmoke;
+        background-color: #1e1e1e;
+        padding: 0.7rem 0.8rem;
+        font-size: 1.3rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // VIEW 1
+  .view1 {
+    width: 100%;
+    margin-top: 0.8rem;
+    color: whitesmoke;
+    @include flex-style(column, 0.5rem);
+
+    .view1__top {
+      width: 100%;
+      position: relative;
+
+      .cover {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        border-radius: 0.5rem;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        z-index: 30;
+        opacity: 0.8;
+      }
+    }
+
+    .view1__bottom {
+      width: 100%;
+      padding: 2rem;
+      background-color: #1e1e1e;
+      border-radius: 0.5rem;
+      @include flex-style(column, 4rem);
+
+      p {
+        font-size: 0.9rem;
+        font-family: "RobotoMono";
+        font-weight: 400;
+        opacity: 0.9;
+      }
+
+      .text_container {
+        width: 100%;
+        @include flex-style(column, 0.8rem);
+
+        p {
+          font-size: 1.1rem;
+          font-weight: 500;
+          line-height: 1.9rem;
+          font-family: "Satoshi";
+          opacity: 0.5;
+        }
+
+        h1 {
+          font-family: "Chillax";
+          font-weight: 400;
+          text-transform: uppercase;
+          font-size: 2rem;
+        }
+
+        .our-story-container {
+          align-items: center;
+          margin-top: 0.3rem;
+          @include flex-style(row, 0.5rem);
+
+          .ri-arrow-down-long-fill {
+            border: 1px solid #9f9e9c;
+            background-color: #2b2929;
+            color: white;
+            border-radius: 50%;
+            padding: 0.612rem 0.7rem;
+            cursor: pointer;
+            font-weight: 400;
+          }
+
+          h3 {
+            font-family: "RobotoMono";
+            color: whitesmoke;
+            font-weight: 400;
+            font-size: 0.8rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  // VIEW 2
+  .view2 {
+    @include flex-style(column, 1rem);
+    color: whitesmoke;
+    width: 100%;
+    padding: 2rem;
+
+    .view2__top,
+    .view2__bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .element {
+        width: 48%;
+        align-items: center;
+        @include flex-style(column, 0.2rem);
+
+        small {
+          opacity: 0.5;
+          @include font-style(0.9rem, "RobotoMono", 200, white);
+        }
+
+        h3 {
+          font-family: "Chillax";
+          font-size: 2rem;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
+  // VIEW 3
+  .view3 {
+    width: 100%;
+    // padding: 2rem;
+
+    .view3__top {
+      width: 100%;
+      position: relative;
+      .cover2 {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        border-radius: 0.5rem;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        z-index: 30;
+      }
+    }
+  }
+}
+
+// MEDIA 545PX
+@media (min-width: 545px) {
+  main {
+    .header_rightnav {
+      #header_rightnav_gitbtn {
+        display: block;
+      }
+    }
+
+    .view1 {
+      .view1__bottom {
+        gap: 10rem;
+
+        > p {
+          font-size: 1.5rem;
+        }
+
+        .text_container {
+          gap: 2rem;
+
+          h1 {
+            font-size: 4rem;
+            max-width: 50rem;
+          }
+
+          p {
+            font-size: 2rem;
+            line-height: 3rem;
+            max-width: 40rem;
+          }
+
+          .our-story-container {
+            .ri-arrow-down-long-fill {
+              padding: 1.1rem 1.2rem;
+            }
+
+            h3 {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .view2__top,
+    .view2__bottom {
+      .element h3 {
+        font-size: 3rem !important;
+      }
+    }
+  }
+}
+
+// MEDIA 820PX
+@media (min-width: 820px) {
+  .view2__top .element h3,
+  .view2__bottom .element h3 {
+    font-size: 3.5rem;
+  }
+}
+
+// MEDIA 1024PX
+@media (min-width: 1024px) {
+  main {
+    header {
+      .header_leftnav h1 {
+        font-size: 1.2rem;
+      }
+
+      .header_rightnav {
+        gap: 1.2rem;
+
+        button {
+          display: block;
+          padding: 0.9rem 1.3rem;
+          border-radius: 0.4rem;
+        }
+
+        #header_rightnav_menuicon {
+          display: none;
+        }
+      }
+    }
+
+    .view1 {
+      flex-direction: row;
+
+      .view1__top,
+      .view1__bottom {
+        width: 50%;
+      }
+
+      .view1__top img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .view1__bottom {
+        justify-content: space-between;
+        padding: 3rem;
+
+        > p {
+          font-size: 0.8rem;
+        }
+
+        .text_container {
+          gap: 1rem;
+
+          h1 {
+            font-size: 3.4rem;
+            max-width: 40rem;
+          }
+
+          p {
+            font-size: 1.3rem;
+            font-weight: 100;
+            line-height: 2rem;
+            max-width: 40rem;
+          }
+
+          .our-story-container {
+            margin-top: 1rem;
+            gap: 0.7rem;
+
+            .ri-arrow-down-long-fill {
+              padding: 0.7rem 0.758rem;
+            }
+
+            h3 {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .view2 {
+      flex-direction: row;
+      padding: 4.5rem 0 0;
+
+      .view2__top,
+      .view2__bottom {
+        .element {
+          small {
+            font-weight: 400;
+          }
+
+          h3 {
+            font-size: 4.2rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA 1440PX
+@media (min-width: 1440px) {
+  .view1 .view1__bottom {
+    gap: 1rem;
+  }
+
+  .view1 .view1__bottom .text_container h1 {
+    font-size: 3.6rem !important;
+  }
+
+  .view2__top,
+  .view2__bottom {
+    .element h3 {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: grid;
+    /* grid-template-columns: 100px minmax(200px,400px); */
+    /* grid-template-columns: 100px minmax(200px,auto); */
+    /* grid-template-rows: 1fr 1fr; */
+    /* row-gap: 20px; */
+    /* column-gap: 20px; */
+    /* grid-gap: 20px; */
+    /* align-items: start; */
+    /* justify-items: end; */
+    /* grid-template-columns: repeat(4,100px); */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr;
+     */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr 100px;
+    grid-gap: 10px;
+
+}
+
+.child{
+
+    background-color: crimson;
+    border: 3px solid wheat;
+
+}
+
+#child1{
+
+    /* grid-column-start: 1; 
+     grid-column-end: 3; Grid 3 start thase tena pela child1 end thase 
+    grid-column-end: -1; */
+
+    /* shorthand property of start and end column and row*/
+
+    grid-row: 1/3; /*1 thi laine 3 na strat sudhi*/
+    grid-column: 1/3; /*1 thi laine 3 na start sudhi*/
+
+}

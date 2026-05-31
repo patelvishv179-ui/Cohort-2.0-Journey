@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.parent{
+
+    width: 50%;
+    font-size: 25px;
+    font-family: 'Lucida Sans';
+    margin: 50px;
+    padding: 20px;
+    background-color: lightblue;
+
+}
+
+h2{
+
+    font-size: 2em;
+
+}
+
+h4{
+
+    font-size: 1em;
+
+}
+
+p{
+
+    font-size: 0.8em;
+
+}
+
+@media (max-width: 550px) {
+    
+    .parent{
+
+        margin: 5px;
+        padding: 12px;
+        width: 97vw;
+
+    }
+
+}

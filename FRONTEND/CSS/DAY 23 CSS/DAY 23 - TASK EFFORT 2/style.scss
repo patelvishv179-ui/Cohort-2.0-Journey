@@ -1,0 +1,230 @@
+    @font-face {
+        font-family: RobotoMono;
+        src: url("./Assets/RobotoMono.woff2");
+    }
+
+    @font-face {
+        font-family: Chillax;
+        src: url("./Assets/Chillax.woff");
+    }
+
+    @font-face {
+        font-family: Satoshi;
+        src: url("./Assets/Satoshi.woff");
+    }
+
+    @mixin flex-column($gap: 0rem){
+
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+
+    html{
+        font-size: clamp(14px,1vw,20px);
+    }
+
+    body{
+        background-color:#121212;
+    }
+
+    main{
+
+        width: 100%;
+        @include flex-column();
+        align-items: center;
+
+        .view1{
+
+            width: 100%;
+            @include flex-column(1rem);
+            padding: 1rem;
+            color: white;
+            max-width: 1800px;
+
+            .view1__top{
+
+                width: 100%;
+                position: relative;
+
+                .cover{
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    
+                    img{
+                        object-fit: cover;
+                        filter: blur(1px);
+                    }
+
+                }
+
+                img{
+                    width: 100%;
+                    border-radius: 0.5rem;
+                }
+
+            }
+
+            .view1__bottom{
+
+                background-color: #1E1E1E;
+                padding: 2rem;
+                @include flex-column(2.5rem);
+                border-radius: 0.5rem;
+
+                p{font-family: "Chillax";}
+
+                .view1__texts{
+
+                    @include flex-column(1.2rem);
+
+                    button{
+                        width: fit-content;
+                        background-color: white;
+                        color: black;
+                        padding: 0.9rem 1.1rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 0.7rem;
+                    }
+
+                    p{
+                        font-family: "Satoshi";
+                        font-weight: 400;
+                        line-height: 2rem;
+                        opacity: 0.4;
+                        font-size: 1.3rem;
+                    }
+
+                    h1{
+                        font-family: "Chillax";
+                        font-weight: 200;
+                        font-size: 2.2rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+        //  Section 2
+
+        .view2{
+           
+            width: 100%;
+            padding: 1rem;
+            @include flex-column(2rem);
+            color: white;
+            // background-color: red;
+
+            .view2__top,.view2__bottom{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            
+                .element {
+
+                    text-align: center;
+                    @include flex-column(0.2rem);
+                    // background-color: red; 
+                    width: 48%; 
+
+                    h2{
+                    font-size: 2.6rem;
+                    font-family: "Chillax";
+                    font-weight: 300;
+                    }
+                    small{
+                        font-family: "RobotoMono";
+                        color: #7a7777; 
+                        font-weight: 600; 
+                        font-size: 1rem;                      
+                    }
+                }
+                
+            }
+
+        }  
+        
+        // Section 3
+
+
+
+    @media (min-width: 920px) {
+        
+        main{
+
+            .view1{
+                flex-direction: row;
+                padding: 3.5rem 3rem;
+                    
+                .view1__top img {
+                    height: 100%;             
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .view1__top,
+                .view1__bottom{
+                    width: 50%;
+                }
+
+                .view1__bottom{
+                    justify-content: space-between;
+                    padding: 3rem;
+                
+                    .view1__texts {
+                        gap: 1rem;
+                        h1{
+                        font-size: 3.8rem;
+                        line-height: 4.5rem;
+                        }
+
+                        p{
+                        font-weight: 200;
+                        }
+                    
+                        button{
+                        margin-top: 0.8rem;
+                        padding: 0.7rem 0.8rem;
+                        cursor: pointer;
+                        }
+
+                    }
+                }
+
+            
+            }
+
+            // View 2
+
+            .view2{
+                flex-direction: row;
+                
+                .view2__top .element h2,
+                .view2__bottom .element h2 {
+                    font-size: 4rem;
+                }                 
+                
+            }
+
+            // View 3
+
+            }
+
+        }
+    }

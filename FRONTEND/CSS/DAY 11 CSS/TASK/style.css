@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: borderbox;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+
+    height: 100%;
+    width: 100%;
+    background-image: url("ALON.webp");
+    background-size: cover; /* cover image as width */
+    background-repeat: no-repeat; /* no repeat  the image */
+    text-align: center;
+    color: #fcfdfc;
+
+}
+
+#main h1{
+
+    font-family: "Dancing Script";
+    font-weight: bold;
+    font-size: 70px;
+    padding: 70px;
+
+}
+
+#main button{
+
+    padding: 8px 25px 8px; /* Top, Right-left Bottom */
+    border-radius: 10px;
+    background-color: #010508;
+    color: white;
+    cursor: pointer;
+    font-family: "Sriracha";
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid skyblue;
+
+}
+
+#main button:hover{
+
+    background-color: #081d2d;
+
+}

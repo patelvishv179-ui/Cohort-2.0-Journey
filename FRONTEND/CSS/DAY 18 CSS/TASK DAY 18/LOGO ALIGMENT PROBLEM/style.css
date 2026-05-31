@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: rosybrown;
+}
+
+.left-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 70px;
+  width: 100%;
+  background-color: red;
+}
+
+.left-footer-logo img {
+  height: 70px;
+  width: 70px;
+  display: block;
+}
+
+.left-footer-logo h2 {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0;
+}

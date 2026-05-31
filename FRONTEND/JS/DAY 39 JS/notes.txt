@@ -1,0 +1,17 @@
+// Imediatly Invoke Fucntion Expression
+
+    (function run(){
+        console.log("I Run Instantly !");
+    })();
+
+// reduce() Fucntion
+
+    let arr = [1,2,3,4,5];
+
+    let ans = arr.reduce(function (acc,val){ //acc - Accumilator
+        return acc + val;
+    },0) // 0 is acc By Default Value Like Sum
+
+    // reduce convert a array in a one Value
+
+    console.log(ans);

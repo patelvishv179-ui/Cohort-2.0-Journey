@@ -1,0 +1,25 @@
+%:- Depends on Parent 
+
+px :- Depend on No Pixels (Fixed)
+
+vh :- depend on viewport height not parent height
+
+vw: :- depend on viewport width not parent width
+
+vmax :- viewport max hase teni value lai lese
+
+vmin : viewport min hase teni value lai lese
+
+em(em squre) : Depending on Parent font Size.
+
+rem : parent on root fontsize
+
+ch :- Width of the "0" Character in the current font. Usefull for input fields.
+
+    ch:- ek line ma ketla character avi sakse jo me width: 20ch rakhi to 20 charcter j avse ek line ma
+
+lh: Relative to the line height of the element.
+
+    jetli space ek line le tena jettli space chhodva 
+
+    like margin-top: 2lh;- -be line jetli space

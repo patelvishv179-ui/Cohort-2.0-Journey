@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height:100%;
+    width:100%;
+    background: linear-gradient(lightblue,lightgray,lightblue);
+    padding: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 500px 1fr;
+    grid-template-areas: "left right";
+    padding-right: 50px;
+}
+
+
+footer{
+
+    display: grid;
+    grid-template-columns: 290px 290px 290px;
+    grid-template-rows: 1.2fr 1fr;
+    grid-template-areas: "uppersection uppersection uppersection"
+                         "belowsection1 belowsection2 belowsection3"
+    ;
+    grid-area: right;
+    grid-gap: 20px;
+
+
+}
+
+section{
+
+    border-radius: 40px;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+main>section:nth-child(1){
+
+    background-image: url("https://i.pinimg.com/736x/43/7f/f0/437ff014917c2e947e6325a2eea2c890.jpg");
+    grid-area: left;
+
+}
+
+section:nth-child(1){
+
+    background-image: url("https://i.pinimg.com/736x/9a/a7/5b/9aa75b7be2bfeb96e1004fb41f7ed4f1.jpg");
+    grid-area: uppersection;
+    background-position: 10%;
+
+}
+
+section:nth-child(2){
+
+    background-image: url("https://i.pinimg.com/1200x/bf/a4/e3/bfa4e307b5eab7399cdfc6d2535bdf6b.jpg");
+    grid-area: belowsection1;
+
+}
+
+section:nth-child(3){
+
+    background-image: url("https://i.pinimg.com/1200x/28/ec/33/28ec33d8be6b328dcb7c54c7c6fe7106.jpg");
+    grid-area: belowsection2;
+
+}
+
+section:nth-child(4){
+
+    background-image: url("https://i.pinimg.com/736x/cd/c8/1b/cdc81b3133e76dcec4af8262d5d7729a.jpg");
+    grid-area: belowsection3;
+    background-position: 10%;
+
+}

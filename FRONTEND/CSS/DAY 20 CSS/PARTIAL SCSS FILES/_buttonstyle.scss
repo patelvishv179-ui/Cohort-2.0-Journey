@@ -1,0 +1,10 @@
+@mixin btn-style($bgcolor,$fontwaight){
+
+    padding: 20px 30px;
+    background-color: $bgcolor;
+    font-size: 18px;
+    font-weight: $fontwaight;
+    outline: none;
+    border: none;
+
+}

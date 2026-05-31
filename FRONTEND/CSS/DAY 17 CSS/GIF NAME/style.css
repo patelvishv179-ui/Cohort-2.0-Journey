@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+    background-color: black;
+    text-align: center;
+
+}
+
+h1{
+
+    font-size: 150px;
+    background: url(https://i.pinimg.com/originals/c0/c8/c0/c0c8c0f700208d65213b8611d64944c2.gif);
+    background-clip: text;
+    color: transparent;
+
+}

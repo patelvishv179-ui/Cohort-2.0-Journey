@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    background-color: #222;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card{
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: #222;
+    padding: 28px;
+    display: flex;
+    gap: 7px;
+}
+
+.key-down,.key-up{
+    height: 160px;
+    width: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-up{
+    background-color: black;
+    color: white;
+}
+.key-down{
+    background-color: white;
+    margin-top: 20px;
+}
+
+.key-down:active, .key-up:active{
+    scale: 0.9;
+}

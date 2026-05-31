@@ -1,0 +1,108 @@
+Pure Function:
+
+    kitni bi bar same argumenet same output made 
+
+    Example:
+    
+    function pure(a,b){
+        console.log(a+b);
+    }
+
+    pure(10,20); //30
+    pure(10,20); //30
+
+Impure Function:
+
+    Example:
+
+        let gloabal = 0;
+        function impure(a){
+            gloabal++;
+            console.log(a+gloabal);
+        }
+        impure(2); //3
+        impure(2); //4
+
+Array De Structuring:
+
+    let arr = [1,2,3];
+    let [a] = arr;
+    console.log(a);
+
+Object De Structuring:
+
+    let obj = {
+        name : "Vishv",
+        age: 20
+    }
+    let {name,age} = obj;
+    console.log(name);
+
+De Structuring using function:
+
+    function des({name,age}){
+        console.log(name);
+        console.log(age);
+    }
+
+    des({name : "Vishv", age : 20});
+
+This Key Word Values:
+
+    // Globally This Keyword Value -> Window
+
+    Exmaple:
+
+         console.log(this); //Window
+
+    // In Function This Keyword Value ->  Window 
+
+    Example:
+
+        function fnc(){
+            console.log(this);
+        }
+
+        fnc(); //Window
+
+    // Function In Object This Keyword Value -> Object But if Arrow Fucntion Then This Keyword Value is Depend On Arrow Fucntion Parent
+
+    Example:
+    
+        let obj = {
+            name : "Vishv",
+            fnc : function(){
+                console.log(this);
+            },
+        }   
+
+        obj.fnc(); 
+
+
+<! ------------ This Keyword About Arrow -------------------- !>
+
+        let obj = {
+            name : "Vishv",
+            fnc : function(){
+                let fnc2 = ()=>{ // jo atle normal func banavyu hot to this value -> Window avi jaot
+                    console.log(this); // this value depend on Parent
+                }
+                fnc2();
+            }
+        }
+
+        obj.fnc();
+
+<! ------------ map Method of Array ------------------------>
+
+Create new Array , Perform Operation For Each Element Seperatly
+
+    Exmaple: let arr = [1,2,3,4,5];
+
+        let arr2 = arr.map((val)=>{
+             return val * val; //Each Element mate alag 
+        })
+
+        console.log(arr2); //[1, 4, 9, 16, 25]
+
+        

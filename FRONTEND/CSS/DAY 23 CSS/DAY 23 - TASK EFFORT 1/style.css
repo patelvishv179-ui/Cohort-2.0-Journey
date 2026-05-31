@@ -1,0 +1,325 @@
+@font-face {
+    font-family: Satoshi;
+    src: url("./Assets/Satoshi.woff");
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url("./Assets/RobotoMono.woff2");
+}
+
+@font-face {
+    font-family: Chillax;
+    src: url("./Assets/Chillax.woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height:100%;
+    width:100%;
+    background-color: #121212;
+}
+
+header{
+
+    height: 80px;
+    width: 100%;
+    /* background-color: rgb(194, 130, 130); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 10px 18px;
+
+}
+
+nav{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+
+}
+
+header nav h1{
+
+    font-size: 22px;
+    color: white;
+    font-family: "Chillax";
+    font-weight: 100;
+
+}
+
+button{
+
+    background-color: #1E1E1E;
+    color: white;
+    padding: 14px 24px;
+    font-family: "RobotoMono";
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 400;
+
+
+}
+
+button:hover{
+
+    background-color: #2c2b2b;
+
+}
+
+.view1{
+
+    padding: 0px 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    /* background-color: rebeccapurple; */
+
+}
+
+.left img{
+
+    height: 725px;
+    width: 740px;
+    border-radius: 12px;
+
+}
+
+span{
+    padding: 1px 8px;
+    background-color: #CEBD63;
+    color: black;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Satoshi";
+    font-weight: 200;
+}
+
+#git{
+
+    background-color: #CEBD63;
+    color: black;
+    letter-spacing: 0.5px;
+    
+
+}
+
+#git:hover{
+
+    background-color: #AD9D49;
+
+}
+
+
+
+.right h3{
+
+    font-family: "RobotoMono";
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.right{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #1E1E1E;
+    height: 725px;
+    width: 740px;
+    border-radius: 12px;
+    padding: 65px 70px;
+
+}
+
+.bottom{
+
+    margin-top: 180px;
+
+}
+
+.bottom h1{
+
+    font-family: "Chillax";
+    color: white;
+    font-size: 65px;
+    font-weight: 300;
+    line-height: 74px;
+    letter-spacing: 1px;
+
+}
+
+.bottom h3{
+
+    margin-top: 10px;
+    font-family: "Satoshi";
+    font-size: 20px;
+    color: rgba(244, 242, 237, 0.6);
+    font-weight: 300;
+    line-height: 32px;
+
+}
+
+.footer{
+
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap:10px;   
+
+}
+
+.footer .ri-arrow-down-long-line{
+
+    padding: 12px 14px;
+    background-color: #363636;
+    color: white;
+    font-family: "Satoshi";
+    border-radius: 50%;
+    border: 1px solid #565656;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+
+.ri-arrow-down-long-line:hover{
+    background-color: #2c2b2b;
+}
+
+.footer h3{
+
+    font-family: "RobotoMono";
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 0;
+    cursor: pointer;
+
+}
+
+.ri-menu-fill{
+
+    display: none;
+
+}
+
+@media (max-width: 730px) {
+ 
+    header{
+
+        height: 3vh;
+        width: 45vw;
+        /* background-color: rebeccapurple; */
+        padding: 10px;
+
+    }
+
+    
+
+header nav h1{
+
+    font-size: 12px;
+    color: white;
+    font-family: "Chillax";
+    font-weight: 100;
+
+}
+
+    .ri-menu-fill{
+
+        display: block;
+        color: white;
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        background-color: #2c2b2b;
+
+    }
+
+    .right-nav button{
+
+        display: none;
+
+    }
+
+    #cart{
+
+    display: block;
+    background-color: #1E1E1E;
+    color: white;
+    padding: 7px 12px;
+    font-family: "RobotoMono";
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    }
+
+    span{
+    padding: 1px 7px;
+    background-color: #CEBD63;
+    color: black;
+    border-radius: 50%;
+    font-size: 12px;
+    font-family: "Satoshi";
+    font-weight: 200;
+}
+
+    #git{
+
+
+    display: block;
+    background-color: #CEBD63;
+    color: black;
+    padding: 9px 12px;
+    font-family: "RobotoMono";
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    }
+
+    .left img{
+        height: 200px;
+        width: 200px;
+    }
+}

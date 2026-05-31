@@ -1,0 +1,14 @@
+== callback function ===
+
+    function abcd(){
+
+      
+    }
+    abcd(function(){
+
+        console.log("Hello"); // it is a callback function je argument ma pass tahyu chhe
+
+    });
+
+== First Class function ===
+

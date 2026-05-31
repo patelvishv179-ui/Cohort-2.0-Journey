@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+    padding: 10px 10px;
+
+}
+
+#box{
+
+    height: 20vh;
+    width: 10vw; /*Depends on viewports width*/
+    background-color: rgb(33, 55, 62);
+
+}

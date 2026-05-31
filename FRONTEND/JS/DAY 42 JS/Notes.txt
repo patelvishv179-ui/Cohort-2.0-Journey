@@ -1,0 +1,10 @@
+DOM:
+
+    Document Object Model
+
+DOM FOUR PILLARS:
+
+    1. Selection of Element
+    2. Changing HTML
+    3. Changing CSS
+    4. Event Handling (Event Listener)

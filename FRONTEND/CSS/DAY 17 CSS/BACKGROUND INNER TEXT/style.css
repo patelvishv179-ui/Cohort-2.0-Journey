@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+    background-color: black;
+
+}
+
+h1{
+
+    font-size: 150px;
+    background: linear-gradient(to right,rgb(116, 129, 134),rgb(39, 243, 39),rgba(196, 221, 3, 0.814));
+    background-clip: text;
+    color: transparent;
+
+}

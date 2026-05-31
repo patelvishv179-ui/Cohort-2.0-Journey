@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .box{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h1{
+    color: green;
+
+} */
+
+/* h1{
+    font-family: monospace;
+    font-size: 50px;
+    color: black;
+    text-shadow: 10px 0px 30px yellow;
+}  */
+
+/* img{
+    
+    height: 400px;
+    width: 400px;
+    filter:  drop-shadow(-50px -50px 50px green);
+
+} */
+/* 
+h1{
+    font-size: 20px;
+}
+
+@keyframes changeBG {
+    
+    from{
+
+
+        background-color: white;
+        border-radius: 0px;
+        scale: 1;
+        rotate: 0deg;
+        opacity: 0;
+
+    }
+
+    to{
+        background-color: yellow;
+        border-radius: 13px;
+        scale: 2;
+        rotate: 360deg;
+        opacity: 1;
+    }
+
+} */
+/* button{
+    background-color: green;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid red;
+    animation: Anime 1s infinite forwards alternate ;
+} */
+/* 
+.box{
+    height: 200px;
+    width: 200px;
+    clip-path: shape(from 50% 91%,line to 90% 50%,arc to 50% 9% of 1%,arc to 10% 50% of 1%);
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: Anime 1s infinite forwards alternate;
+}
+
+h1{
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+@keyframes Anime {
+    
+    from{
+
+        scale: 1;
+
+    }
+
+    to{
+
+        scale: 1.5;
+
+    }
+
+} 
+*/
+
+.div{
+    height: 200px;
+    width: 150px;
+    border: 2px solid white;
+    background: var(--bgColor);
+    animation: AnimateBGColor 1s forwards;
+}
+
+/* Syntax Values -> color,length, angle */
+@property --bgColor{
+    syntax: "<length>";
+    initial-value: rgb(56, 199, 113);
+    inherits: false;
+}
+
+@keyframes AnimateBGColor {
+    from{
+        --bgColor: red;
+    }
+    to{
+        --bgColor: green;
+    }
+}

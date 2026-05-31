@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.blue {
+  padding: 20px 30px;
+  background-color: blue;
+  font-size: 18px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+}
+
+.red {
+  padding: 20px 30px;
+  background-color: red;
+  font-size: 18px;
+  font-weight: 900;
+  outline: none;
+  border: none;
+}/*# sourceMappingURL=style.css.map */

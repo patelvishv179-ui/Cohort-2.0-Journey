@@ -1,0 +1,15 @@
+## Object Oriented Concepts in JS
+
+- Introduction to OOPS in JS
+
+-Understanding classes and objects in JS
+
+-Understanding constructor and Prototypes in JS
+
+-this keyword in JS
+
+- call apply bind methods in JS
+
+- More Topics in OOPS -> 
+
+    Expression, Hoisting, Inheritence, getter , setter

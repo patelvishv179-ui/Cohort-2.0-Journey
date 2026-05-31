@@ -1,0 +1,71 @@
+======================= /* Linear Gradient */ =====================
+
+First Paramter is Function How To Represent a Color Include (in oklab, in hsl)
+Second Paramter is Direction In Which Direction a Colors Fadup Include (to right,to right bottom)
+Third Paramter is Color
+
+Example:
+
+ linear-gradient(in oklab to right, red, green);
+
+
+========================= /* Radial Gradient */ ==========================
+Example:
+
+ background: radial-gradient(100px,red, purple);
+
+ First Paramete-> How much big a circle looks like (Radius)
+
+ CIRCLE NU CENTER KYA RAKHVU AT THI DECIDE THAY
+
+ EXAMPLE:  background: radial-gradient(20px at 100px 200px,red, purple);
+
+============================== /* CSS CUSTOM PROPERTYS OR ROOT VARIABLES */==================
+
+:root{
+    --primary: red;
+}
+
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: var(--primary);
+    border: 1px solid white;
+}
+
+============================= APPROACH ============
+
+STEP 1: CREATE A BOX GIVE HIM HIGHT AND WIDTH 100%
+
+.box{
+    height: 100%;
+    width: 100%;
+}
+
+STEP 2: CREATE ROOT VRIABLE CALLED X AND Y
+
+:root{
+  --x: 400px;
+  --y: 400px;
+}
+
+STPE 3: USE IT IN A RADIAL GRADIENT IN A (AT) PROPERTY (FOR CENTER THE DIV)
+
+.box{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(100px at var(--x) var(--y) , rgb(255,255,255), rgb(0,0,0));
+}
+
+STEP 4: CHNAGE THE PROPERTY OF VARIBLES USING JS 
+
+addEventListener("mousemove",(e)=>{
+
+    console.log(e.clientX,e.clientY);
+    
+    document.body.style.setProperty("--x",e.clientX + 'px');
+    document.body.style.setProperty("--y",e.clientY + 'px');
+
+})
+
+STEP 5: 

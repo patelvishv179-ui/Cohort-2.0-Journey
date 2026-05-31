@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.box{
+
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+
+}
+
+.box:nth-child(2){
+
+    /* Define appearances style of box 2 */
+
+    background-color: lightcoral;
+
+}
+
+.box:nth-last-child(2){
+
+    /* Chhele thi biju child */
+
+    background-color: lightcyan;
+
+}
+
+.box:nth-child(2n){
+
+    /* Badha bija(2,4,6...) element par lagse */
+
+    background-color: lightskyblue;
+
+}
+
+.box:nth-child(2n-1){
+
+    /* Pelu Triju Panchnmu .... */
+
+    background-color: blue;
+
+}

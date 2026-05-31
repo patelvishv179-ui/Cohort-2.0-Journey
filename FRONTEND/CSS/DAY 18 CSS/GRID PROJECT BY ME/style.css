@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans';
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 50px;
+
+}
+
+.Childs{
+
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+nav{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+section{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+aside{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+}
+
+footer{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}

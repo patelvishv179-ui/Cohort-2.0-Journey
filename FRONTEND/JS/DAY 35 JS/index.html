@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 35 | 02/01/2025</title>
+</head>
+<body>
+    
+
+<script>
+
+    //Ask use for words untill they type "stop" count how many they typed yes
+
+    // let count=0;
+    // let word = prompt("Word batao");
+    // if(word=="stop") console.log("Stopped");
+    // if(word=="yes") count++;
+    // while(word!=="stop"){
+    //     word = prompt("Word Batao");
+    //     if(word=="yes"){
+    //         count++;
+    //     }      
+    // }
+    // console.log("Yes apperar " + count + " Times");
+
+    //Sum of all odd numbers from 1 to 100
+
+    // let sum = 0;
+
+    // for(let i=1; i<=100; i++){
+    //     if(i%2!==0){sum=sum+i;}
+    // }
+
+    // console.log("Sum of odd numbers from 1 to 100 is " + sum);
+
+    //keep asking number untill user enters even number
+
+    // let num = +prompt("Number batao");
+
+    // if(num%2==0){console.log("Stopped");}
+
+    // while(num%2!==0){
+
+    //     num = +prompt("Number batao");
+    //     if(num%2==0){console.log("Stopped");}
+
+    // }
+
+    // Print numbers beetween two user inputs
+
+    // let num1 = prompt("Enter a Starting number ");
+    // let num2 = prompt("Enter a Ending Number ");
+    
+    // if(num1<num2){
+    // num1++;
+    // for(num1; num1<num2; num1++){
+
+    //     console.log(num1);
+
+    // }}
+    // if(num1>num2){
+    //     num1--;
+    //     for(num1; num1>num2; num1--){
+
+    //     console.log(num1);
+
+    // }
+    // }
+
+    //Print only Firt 3 odd numbers from 1 to 20 use loop stop with break after 3 odd points
+
+    // let count = 0;
+
+    // for(let i=1;i<=20;i++){
+
+    //     if(i%2!==0 && count!==3){
+
+    //         console.log(i);
+    //         count++;
+    //     }
+
+    // }
+
+    
+    // Ask the user to enter numbers repeatedly until they type -1.
+// Find and print:
+// The average of all positive numbers entered
+// The count of numbers divisible by 3
+// Conditions:
+// -1 is only a stop signal and must not be included in any calculation
+// 0 should be ignored completely
+// Negative numbers (except -1) should not be included in the average
+// At least one positive number will be entered before -1
+let sum = 0;
+let avgCount = 0;
+let div3Count = 0;
+
+while (true) {
+    let num = Number(prompt("Enter a number (-1 to stop):"));
+
+    if (num === -1) {
+        break;
+    }
+
+    if (num === 0) {
+        continue;
+    }
+
+    if (num > 0) {
+        sum += num;
+        avgCount++;
+    }
+
+    if (num % 3 === 0) {
+        div3Count++;
+    }
+}
+
+let average = sum / avgCount;
+
+console.log("Average of positive numbers is: " + average);
+console.log("Count of numbers divisible by 3 is: " + div3Count);
+
+</script>
+
+</body>
+</html>

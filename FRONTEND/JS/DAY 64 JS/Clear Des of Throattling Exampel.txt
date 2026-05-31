@@ -1,0 +1,351 @@
+====================================================
+THROTTLE NOTES (OUR EXAMPLE)
+====================================================
+
+CODE:
+
+function throttle(fn,delay){
+
+    let last = 0;
+
+    return function(){
+
+        const now = Date.now();
+
+        if(now - last >= delay){
+
+            last = now;
+
+            fn();
+
+        }
+
+    }
+
+}
+
+window.addEventListener("mousemove",
+
+    throttle(function(){
+        console.log("Vishv");
+    },2000)
+
+);
+
+====================================================
+THROTTLE SHU CHE?
+====================================================
+
+Throttle etle:
+
+"Function ne fixed time interval ma j
+execute thava devu."
+
+Example:
+
+delay = 2000ms
+
+To function 2 second ma maximum 1 vaar j
+execute thase.
+
+====================================================
+STEP 1 : throttle() CALL THAY
+====================================================
+
+throttle(function(){
+    console.log("Vishv");
+},2000)
+
+Ahi:
+
+fn = function(){
+    console.log("Vishv");
+}
+
+delay = 2000
+
+last = 0
+
+====================================================
+STEP 2 : RETURN SHU KARE CHE?
+====================================================
+
+return function(){
+
+    const now = Date.now();
+
+    if(now - last >= delay){
+
+        last = now;
+
+        fn();
+
+    }
+
+}
+
+Aa function return thay che.
+
+Ane addEventListener ma register thay che.
+
+====================================================
+IMPORTANT
+====================================================
+
+Returned function ne aa variables yaad rahe che:
+
+last
+fn
+delay
+
+Aane Closure kahe che.
+
+====================================================
+Date.now() SHU RETURN KARE CHE?
+====================================================
+
+Date.now()
+
+Current time ne milliseconds ma return kare che.
+
+Reference Date:
+
+1 January 1970 UTC
+
+Example:
+
+Date.now()
+
+Output:
+
+1748600000000
+
+Aa milliseconds che.
+
+====================================================
+KEM DATE.NOW() USE KARYU?
+====================================================
+delay ma miliseconds j chhe liek 2000 e 2 second babarbr che
+Apde check karvu che:
+
+Last execution thi atyare sudhi
+ketlo time thayo?
+
+Etla mate current time joiye.
+
+Ane Date.now() current time aape che.
+
+====================================================
+FIRST MOUSE MOVE
+====================================================
+
+Initial value:
+
+last = 0
+
+Mouse move thay.
+
+const now = Date.now();
+
+Maan lo:
+
+now = 1748600000000
+
+Condition:
+
+if(now - last >= delay)
+
+↓
+
+1748600000000 - 0 >= 2000
+
+TRUE
+
+====================================================
+PACHI SHU THASE?
+====================================================
+
+last = now
+
+Etle:
+
+last = 1748600000000
+
+Pachi:
+
+fn();
+
+Execute thase.
+
+Output:
+
+Vishv
+
+====================================================
+SECOND MOUSE MOVE
+====================================================
+
+100ms pachi fari mouse move thay.
+
+Current:
+
+last = 1748600000000
+
+now = 1748600000100
+
+Check:
+
+now - last
+
+↓
+
+1748600000100
+-
+1748600000000
+
+=
+
+100
+
+Condition:
+
+100 >= 2000
+
+FALSE
+
+Etle fn() execute nahi thay.
+
+====================================================
+THIRD MOUSE MOVE
+====================================================
+
+500ms pachi move thay.
+
+Difference:
+
+500
+
+500 >= 2000
+
+FALSE
+
+Kashu nahi thay.
+
+====================================================
+2 SECOND PACHI
+====================================================
+
+Maan lo:
+
+now = 1748600002000
+
+Difference:
+
+2000
+
+2000 >= 2000
+
+TRUE
+
+Etle:
+
+last = now
+
+fn();
+
+Output:
+
+Vishv
+
+====================================================
+THROTTLE NO MAIN IDEA
+====================================================
+
+Darek event par function execute nathi thatu.
+
+Delay complete thay pachi j function
+execute thai sake.
+
+====================================================
+TIMELINE
+====================================================
+
+0ms      -> Vishv
+100ms    -> Ignore
+300ms    -> Ignore
+700ms    -> Ignore
+1500ms   -> Ignore
+2000ms   -> Vishv
+2100ms   -> Ignore
+4000ms   -> Vishv
+
+====================================================
+DEBOUNCE VS THROTTLE
+====================================================
+
+DEBOUNCE:
+
+User stop kare pachi execute.
+
+Typing Search ma use thay.
+
+Example:
+
+H
+He
+Hel
+Hell
+Hello
+
+400ms sudhi stop
+
+↓
+
+Function Execute
+
+====================================================
+
+THROTTLE:
+
+Time interval pachi execute.
+
+Scroll, Mousemove, Resize ma use thay.
+
+Example:
+
+Mouse continuously move thay.
+
+2 second ma maximum 1 vaar j
+function execute thase.
+
+====================================================
+INTERVIEW DEFINITIONS
+====================================================
+
+Date.now():
+
+Current timestamp in milliseconds
+return kare che.
+
+Throttle:
+
+Function ne fixed interval ma j
+execute thava de che.
+
+Closure:
+
+Returned function outer variables
+(last, fn, delay) ne yaad rakhe che.
+
+====================================================
+MEMORY TRICK
+====================================================
+
+Date.now() = Current Time
+
+Debounce = Wait Until User Stops
+
+Throttle = Run Once Per Interval
+
+Closure = Function Remembers Outer Variables
+====================================================

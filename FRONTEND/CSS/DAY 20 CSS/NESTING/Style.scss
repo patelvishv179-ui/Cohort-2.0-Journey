@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section{
+
+        height: 50%;
+        width: 50%;
+        background-color: wheat;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+
+            font-size: 20px;
+            font-family: system-ui;
+
+        }
+        
+    }
+
+}

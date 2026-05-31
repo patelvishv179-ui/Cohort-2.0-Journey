@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+    perspective: 1000px;
+
+}
+
+#box{
+
+    height: 150px;
+    width: 150px;
+    background-color: lightseagreen;
+    /* transform: rotateZ(-10deg); -- by default z axis*/
+    /* transform: rotateX(180deg); -- nahi dekhega(iskeliye parspective(dekhne ka najjariya body ko dena padega parspective:1000px;) pen rakhkar logic samj sakte he parsctive(dekhvani duri)*/
+    transform: rotateX(40deg);
+
+
+}

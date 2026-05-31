@@ -1,0 +1,63 @@
+Js-> Nature is Synchronouse (Not Multiple Task Together Perform Sequencially)
+
+We Can Make Js Asynchronouse  (Multiple Task At a Time Like Mobile par vat pan karvi  ane Game pan ramvi)
+
+========= Set Timeout Example=======
+
+    <h1>Hello Vishv !</h1>
+
+    <button>Change User</button>
+
+let h1  = document.querySelector("h1");
+
+let btn  = document.querySelector("button");
+
+btn.addEventListener("click",()=>{
+
+    h1.textContent = "Changing User ...";
+
+    setTimeout(()=>{
+        h1.textContent = "Hello Ram !";
+    },2000);
+
+});
+
+========= Set Interval Example ===============
+
+    <h1>0</h1>
+    <button id="incbtn">Increment</button>
+    <button id="stopbtn">Stop</button>
+    <button id="startbtn">Start From Zero</button>
+
+let incbtn = document.querySelector("#incbtn");
+
+let stopbtn = document.querySelector("#stopbtn");
+
+let startbtn = document.querySelector("#startbtn");
+
+let h1 = document.querySelector("h1");
+
+let inc;
+let a;
+
+incbtn.addEventListener("click",()=>{
+
+    a = 0;
+
+    inc = setInterval(()=>{
+        a++;
+        h1.textContent = a;
+    },100)
+
+});
+
+stopbtn.addEventListener("click",()=>{
+
+    clearInterval(inc);
+
+})
+
+startbtn.addEventListener("click",()=>{
+    a=0;
+    h1.innerText = 0;
+})

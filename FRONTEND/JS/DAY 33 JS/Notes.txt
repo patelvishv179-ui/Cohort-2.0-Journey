@@ -1,0 +1,35 @@
+1. String ko number me fervan ne ki tricks:
+
+promopt ke age + likh do 
+example: let num = +prompt("Number batao");
+
+Number Fucnton use karo 
+example: Number(num);
+
+parseInt () use karo
+example: parseInt(num);
+
+2. How to handle cancle prompt null prompt etc.
+
+    let age = prompt("Enter your age: ");
+
+    if(age === null){
+        console.error("You Pressed Cancle Button");
+    }
+    else if(age.trim() === ""){
+        console.error("Please enter Something");
+    }
+    else{
+        age=Number(age);
+        if(age>=18) console.log("Eligible for vote");
+        else console.log("Not Eligible");
+
+    }
+
+    jo apne ==="" apsu to te ek j space ne compare karse
+
+==========
+
+isNaN fucntion is used for check NuN value
+
+liek if(isNaN(age)) {console.log('Please Enter Vaild Age');}

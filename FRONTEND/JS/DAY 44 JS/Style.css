@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+button{
+    padding: 24px 48px;
+    background-color: rgb(26, 5, 147);
+    color: white;
+    border: 2px solid white;
+    position: relative;
+    z-index: 9999;
+}
+
+button:active{
+    scale: 0.9;
+}
+
+.toast{
+
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+
+}

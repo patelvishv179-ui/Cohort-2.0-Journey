@@ -1,0 +1,63 @@
+=================================================================
+
+Box - Shadow
+
+Exmaple: box-shadow: -5px -5px 20px yellow; /*x, y, spread radius, color */
+
+=======================================================================
+
+Text - Shadow
+
+Example:  text-shadow: 10px 10px 10px red; /* Same Structure as Box Shadow */
+
+=========================================================================
+
+Image Ke Liye -> filter(Drop Shadow) -> drop-shadow() ma inset support nathi:
+
+======================================================================================
+
+Conic - Gradient:
+
+Exmaple: background: conic-gradient(from 45deg, white,blue,red,yellow);
+    // from 45deg means how much rotate a line show straight line in center 
+
+=======================================================================================
+
+Key Frame:
+
+   animation: changeBG 1s 1s infinite forwards alternate;
+   //alternate means contoinously flow ma chlatu re ave ne jay ave ne jay
+   //infinite means unlimited var ave ne jay infinit ni jagya e number pan lakhi sakay jem k 2 to be var chalse
+
+
+Example:
+@keyframes changeBG {
+    
+    from{
+        background-color: white;
+    }
+
+    to{
+        background-color: red;
+    }
+
+}
+.box{
+    height: 200px;
+    width: 200px;
+    animation: changeBG 1s 5s; // First Two  Param is Compaulasary
+}
+
+==================================================================================
+
+@Property
+
+
+
+=====================================================================================
+
+:has()
+
+======================
+
+descrete propertys in css - >NOt Able To animate like dispaly, visible

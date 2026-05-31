@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+
+}
+
+a{
+
+    font-size: 70px;
+    font-weight: 400;
+    font-family: 'Lucida Sans';
+    margin-right: 30px;
+
+}
+
+button{
+
+    padding: 15px 24px;
+    font-weight: 500;
+    font-family: 'Lucida Sans';
+    border-radius: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+header{
+
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+
+}
+
+.ri-play-line{
+
+font-size: 16px;
+margin-right: 5px;
+
+}
+
+.ri-arrow-right-up-line{
+
+    padding: 12px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #BCC4FF;
+    color: black;
+    font-weight: 400;
+
+}
+
+#talk{
+
+    padding: 15px 15px 15px 15px;
+    background-color: #2C313F;
+    color: white;   
+
+}
+
+#contact{
+
+    padding: 15px 15px 15px 15px;
+    background-color: #2C313F;
+    color: white;     
+
+}
+
+#one{
+
+    padding: 0px;
+    margin-left: 10px;
+    border-radius: 0%;
+    background: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+h2{
+
+    font-size: 30px;
+    font-family:'Trebuchet MS';
+
+}
+
+section{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img{
+
+    height: 55px;
+    width: 55px;
+
+}

@@ -1,0 +1,356 @@
+@font-face {
+  font-family: RobotoMono;
+  src: url("./Assets/RobotoMono.woff2");
+}
+@font-face {
+  font-family: Chillax;
+  src: url("./Assets/Chillax.woff");
+}
+@font-face {
+  font-family: Satoshi;
+  src: url("./Assets/Satoshi.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #121212;
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+}
+main header {
+  display: flex;
+  color: whitesmoke;
+  justify-content: space-between;
+  align-items: center;
+}
+main header .header_leftnav h1 {
+  font-size: 1.2rem;
+  font-family: "Chillax";
+  font-weight: 100;
+  color: whitesmoke;
+  transform: translate(8px, 3px);
+}
+main header .header_rightnav {
+  display: flex;
+  gap: 0.6rem;
+}
+main header .header_rightnav button {
+  font-size: 0.9rem;
+  font-family: "RobotoMono";
+  font-weight: 400;
+  color: whitesmoke;
+  display: none;
+  padding: 0.5rem 1.3rem;
+  background-color: #1e1e1e;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+main header .header_rightnav #header_rightnav_cartbtn_icon {
+  font-size: 1rem;
+  font-family: "Satoshi";
+  font-weight: 200;
+  color: black;
+  padding: 0.1rem 0.5rem;
+  background-color: #cebd63;
+  border-radius: 50%;
+  text-align: center;
+}
+main header .header_rightnav #header_rightnav_gitbtn {
+  background-color: #cebd63;
+  color: black;
+  border-radius: 0.4rem;
+  height: 3.1rem;
+}
+main header .header_rightnav #header_rightnav_gitbtn:hover {
+  background-color: #b1a462;
+}
+main header .header_rightnav #header_rightnav_cartbtn {
+  display: block;
+}
+main header .header_rightnav #header_rightnav_menuicon {
+  display: block;
+  border: 0.1rem solid #1f1d1d;
+  color: whitesmoke;
+  background-color: #1e1e1e;
+  padding: 0.7rem 0.8rem;
+  font-size: 1.3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+main .view1 {
+  width: 100%;
+  margin-top: 0.8rem;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .view1 .view1__top {
+  width: 100%;
+  position: relative;
+}
+main .view1 .view1__top .cover {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  border-radius: 0.5rem;
+}
+main .view1 .view1__top img {
+  width: 100%;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 30;
+  opacity: 0.8;
+}
+main .view1 .view1__bottom {
+  width: 100%;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .view1 .view1__bottom p {
+  font-size: 0.9rem;
+  font-family: "RobotoMono";
+  font-weight: 400;
+  opacity: 0.9;
+}
+main .view1 .view1__bottom .text_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .view1 .view1__bottom .text_container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  font-family: "Satoshi";
+  opacity: 0.5;
+}
+main .view1 .view1__bottom .text_container h1 {
+  font-family: "Chillax";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+main .view1 .view1__bottom .text_container .our-story-container {
+  align-items: center;
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+main .view1 .view1__bottom .text_container .our-story-container .ri-arrow-down-long-fill {
+  border: 1px solid #9f9e9c;
+  background-color: #2b2929;
+  color: white;
+  border-radius: 50%;
+  padding: 0.612rem 0.7rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+main .view1 .view1__bottom .text_container .our-story-container h3 {
+  font-family: "RobotoMono";
+  color: whitesmoke;
+  font-weight: 400;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+main .view2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: whitesmoke;
+  width: 100%;
+  padding: 2rem;
+}
+main .view2 .view2__top,
+main .view2 .view2__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .view2 .view2__top .element,
+main .view2 .view2__bottom .element {
+  width: 48%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+main .view2 .view2__top .element small,
+main .view2 .view2__bottom .element small {
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-family: "RobotoMono";
+  font-weight: 200;
+  color: white;
+}
+main .view2 .view2__top .element h3,
+main .view2 .view2__bottom .element h3 {
+  font-family: "Chillax";
+  font-size: 2rem;
+  font-weight: 200;
+}
+main .view3 {
+  width: 100%;
+}
+main .view3 .view3__top {
+  width: 100%;
+  position: relative;
+}
+main .view3 .view3__top .cover2 {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  border-radius: 0.5rem;
+}
+main .view3 .view3__top img {
+  width: 100%;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 30;
+}
+
+@media (min-width: 545px) {
+  main .header_rightnav #header_rightnav_gitbtn {
+    display: block;
+  }
+  main .view1 .view1__bottom {
+    gap: 10rem;
+  }
+  main .view1 .view1__bottom > p {
+    font-size: 1.5rem;
+  }
+  main .view1 .view1__bottom .text_container {
+    gap: 2rem;
+  }
+  main .view1 .view1__bottom .text_container h1 {
+    font-size: 4rem;
+    max-width: 50rem;
+  }
+  main .view1 .view1__bottom .text_container p {
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 40rem;
+  }
+  main .view1 .view1__bottom .text_container .our-story-container .ri-arrow-down-long-fill {
+    padding: 1.1rem 1.2rem;
+  }
+  main .view1 .view1__bottom .text_container .our-story-container h3 {
+    font-size: 1.2rem;
+  }
+  main .view2__top .element h3,
+  main .view2__bottom .element h3 {
+    font-size: 3rem !important;
+  }
+}
+@media (min-width: 820px) {
+  .view2__top .element h3,
+  .view2__bottom .element h3 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  main header .header_leftnav h1 {
+    font-size: 1.2rem;
+  }
+  main header .header_rightnav {
+    gap: 1.2rem;
+  }
+  main header .header_rightnav button {
+    display: block;
+    padding: 0.9rem 1.3rem;
+    border-radius: 0.4rem;
+  }
+  main header .header_rightnav #header_rightnav_menuicon {
+    display: none;
+  }
+  main .view1 {
+    flex-direction: row;
+  }
+  main .view1 .view1__top,
+  main .view1 .view1__bottom {
+    width: 50%;
+  }
+  main .view1 .view1__top img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .view1 .view1__bottom {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  main .view1 .view1__bottom > p {
+    font-size: 0.8rem;
+  }
+  main .view1 .view1__bottom .text_container {
+    gap: 1rem;
+  }
+  main .view1 .view1__bottom .text_container h1 {
+    font-size: 3.4rem;
+    max-width: 40rem;
+  }
+  main .view1 .view1__bottom .text_container p {
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 2rem;
+    max-width: 40rem;
+  }
+  main .view1 .view1__bottom .text_container .our-story-container {
+    margin-top: 1rem;
+    gap: 0.7rem;
+  }
+  main .view1 .view1__bottom .text_container .our-story-container .ri-arrow-down-long-fill {
+    padding: 0.7rem 0.758rem;
+  }
+  main .view1 .view1__bottom .text_container .our-story-container h3 {
+    font-size: 0.9rem;
+  }
+  main .view2 {
+    flex-direction: row;
+    padding: 4.5rem 0 0;
+  }
+  main .view2 .view2__top .element small,
+  main .view2 .view2__bottom .element small {
+    font-weight: 400;
+  }
+  main .view2 .view2__top .element h3,
+  main .view2 .view2__bottom .element h3 {
+    font-size: 4.2rem !important;
+  }
+}
+@media (min-width: 1440px) {
+  .view1 .view1__bottom {
+    gap: 1rem;
+  }
+  .view1 .view1__bottom .text_container h1 {
+    font-size: 3.6rem !important;
+  }
+  .view2__top .element h3,
+  .view2__bottom .element h3 {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+How to Take a value of function without using rest operator
+we use a function argument witch is a hidden array of argument.
+Example:
+
+    function abcd(){
+
+        console.log(arguments[0]);
+        console.log(arguments[1]);
+
+    }
+    abcd("a","b");
+
+// Rest Ops;
+
+    function abcd(a,b,...rest){
+
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+    
+    }
+
+    abcd(1,2,3,4,5,6,7,8,9);
+
+    ====== Prameters in Js ====
+
+    1. Required:
+
+        function abcd(a,b){} //here a and b is a require parameters
+
+    2. Destructured
+
+    function Destructured({name,age}){
+
+        console.log(name);
+        console.log(age);
+
+    }
+
+    Destructured({name: "Vishv",age: 20});
+
+    function abcd([one,two]){
+
+        console.log(one);
+        console.log(two);
+
+    }
+
+    abcd([1,2]);
+
+    3 default parameters:
+
+        
+    function abcd(a,b,c=3){
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+    }
+    abcd(1,2);
+
+    4. Rest parameters
+
+        function abcd(a,b,...rest){
+
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+    
+    }
+
+    abcd(1,2,3,4,5,6,7,8,9);
+
+    ========= Arguments =======
+
+    1. positional argument means je order ma parameter hoy te j order ma argumnet apvani
+
+        function PositionalArgument(a,b,c){
+        console.log("a is " + a);
+        console.log("b is " + b);
+        console.log("c is " + c);
+    }
+
+    PositionalArgument(10,20,30);
+
+    2. default 
+
+    function PositionalArgument(a=0,b=0,c=0){
+        console.log("a is " + a);
+        console.log("b is " + b);
+        console.log("c is " + c);
+    }
+
+    PositionalArgument();
+

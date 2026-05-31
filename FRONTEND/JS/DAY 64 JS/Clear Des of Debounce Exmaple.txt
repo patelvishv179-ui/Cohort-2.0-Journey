@@ -1,0 +1,177 @@
+====================================================
+RETURN + SCOPE + CLOSURE (DEBOUNCE EXAMPLE)
+====================================================
+CODE:
+function deBounce(fnc,time){
+    let timer;
+    return function(){
+        clearTimeout(timer);
+        timer = setTimeout(fnc,time);
+    }
+}
+inp.addEventListener("input",deBounce(function(){
+    console.log("Hello");
+},400));
+
+====================================================
+STEP 1 : deBounce() CALL THAY
+====================================================
+deBounce(function(){
+    console.log("Hello");
+},400)
+Ahi:
+fnc = function(){
+    console.log("Hello");
+}
+time = 400
+timer = undefined
+
+====================================================
+STEP 2 : RETURN SHU KARE CHE?
+====================================================
+return function(){
+    clearTimeout(timer);
+    timer = setTimeout(fnc,time);
+}
+Aa function execute nathi thatu.
+Aa function return thay che.
+Etle:
+deBounce(...) nu return value =
+function(){
+    clearTimeout(timer);
+    timer = setTimeout(fnc,time);
+}
+
+====================================================
+STEP 3 : addEventListener NE SHU MALE CHE?
+====================================================
+
+Ahi:
+inp.addEventListener(
+    "input",
+    deBounce(...)
+)
+Pehla deBounce execute thay.
+Pachi je function return thay che e
+addEventListener ma register thay che.
+Internally:
+inp.addEventListener("input",
+    function(){
+        clearTimeout(timer);
+        timer = setTimeout(fnc,time);
+    }
+)
+
+====================================================
+IMPORTANT QUESTION
+====================================================
+Returned function ni andar timer kya che?
+function(){
+    clearTimeout(timer);
+}
+Ahi timer declare nathi.
+To error kem nathi aavto?
+
+====================================================
+ANSWER : CLOSURE
+====================================================
+Jyare returned function create thay che
+tyare JavaScript ene yaad rakhade che ke
+aa function deBounce ni andar create thayu hatu.
+Etle aa function ne aa variables yaad rahe:
+timer
+fnc
+time
+Ane aane Closure kahe che.
+
+====================================================
+FIRST INPUT EVENT
+====================================================
+User type kare:
+H
+Returned function chale:
+clearTimeout(timer);
+Current value:
+timer = undefined
+Etle:
+clearTimeout(undefined)
+Koi error nathi.
+Kashu nathi thatu.
+Pachi:
+timer = setTimeout(fnc,400)
+Maan lo browser ID aape:
+timer = 101
+
+====================================================
+SECOND INPUT EVENT
+====================================================
+User fari type kare:
+He
+Returned function fari chale.
+Current value:
+timer = 101
+Etle:
+clearTimeout(101)
+Old timer cancel.
+Pachi:
+timer = setTimeout(fnc,400)
+Navo timer:
+timer = 102
+
+====================================================
+THIRD INPUT EVENT
+====================================================
+
+User fari type kare:
+Hel
+clearTimeout(102)
+Old timer cancel.
+Pachi:
+timer = 103
+
+====================================================
+DEBOUNCE NO MAIN IDEA
+====================================================
+Darek key press par:
+Old timer cancel
+↓
+New timer create
+Etle function execute nathi thatu.
+
+====================================================
+KYARE EXECUTE THASE?
+====================================================
+Jyare user typing bandh kari de.
+400ms sudhi kai input na aape.
+Tyare last timer complete thase.
+Ane:
+console.log("Hello")
+execute thase.
+
+====================================================
+INTERVIEW DEFINITIONS
+====================================================
+
+RETURN:
+return value/function pachhu mokle che.
+
+SCOPE:
+Variable kya access thai sake e scope.
+
+CLOSURE:
+Function tena outer scope na variables ne
+yaad rakhe che even outer function complete
+thai gaya pachi pan.
+
+DEBOUNCE:
+Old timer cancel karo ane navo timer banao.
+User typing bandh kare pachi j function chalavo.
+
+====================================================
+MEMORY TRICK
+====================================================
+Return = Function pachhi aape
+Scope = Variable kya rahe che
+Closure = Function ne outer variables yaad rahe
+Debounce = Cancel old timer + Create new timer
+====================================================

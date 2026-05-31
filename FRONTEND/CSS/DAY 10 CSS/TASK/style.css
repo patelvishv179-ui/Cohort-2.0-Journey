@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito"; /* font-family globally set for all elements */
+    text-align: center;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.header{
+
+    height: 160px;
+    width: 100%;
+    background-color: #272F3E;    
+
+}
+
+.header i{
+
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(236, 232, 232);
+
+}
+
+.header h1{
+
+    font-weight: 800;
+    font-size: 30px;
+    padding-top: 40px;
+    color: #e6e4e4;
+
+}
+
+/* Middle Box All Header Lookes like below styleness */
+
+h1{
+
+    font-weight: 800;
+    font-size: 30px;
+    padding-top: 60px;
+    color: black;
+
+}
+
+.middle{
+
+    height: 1840px;
+    width: 100%;
+    background-color: #d6d6d7;
+    padding-top: 40px;
+
+}
+
+.middle .box-1{
+
+    height: 210px;
+    width: 80%;
+    margin: 0 auto 40px; /* Div Horizontally center Top-Bottom = 0 , Right-Left Auto Means Center The Div */
+    background-color: #ecebec;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.box-1 p{
+
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #7d7d7d;
+    padding: 0 19px;
+
+}
+
+.middle #box-2{
+
+    padding: 0px;
+    margin-top: 40px;
+    height: 280px;
+    background-color: #CCDEED;
+
+}
+
+.sub-menus{
+
+    height: 50px;
+    width: 600px;
+    background-color: #ECEBEC;
+    margin: 10px auto;
+    padding: 14px;
+    border-radius: 10px;
+
+}
+
+.sub-menus h4{
+
+    font-weight: 500;
+    color:black;
+    font-size: 18px;
+
+}
+
+.middle #box-3{
+
+    margin-top: 40px;
+    height: 400px;
+    padding: 0px;
+    background-color: #EBDEB4;
+
+}
+
+.sub-menus .box-3-submenus{
+
+    background-color: #ECEBEC;
+
+}
+
+.sub-menus .box-3-submenus h4{
+
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+.middle #box-4{
+
+    margin-top: 40px;
+    height: 360px;
+    padding: 0px;
+    background-color: #DAD5EB;
+
+}
+
+.middle #box-5{
+
+    margin-top: 40px;
+    height: 360px;
+    padding: 0px;
+    background-color: #C9E8D4;
+
+}
+
+.footer{
+
+    height: 65px;
+    width: 100%;
+    background: linear-gradient(#272F3E,#11141b);
+
+}
+
+.footer h4{
+ 
+    line-height: 65px; 
+    
+    /* Line-Height == Footter Height. If the line-height is 65px and the font-size is 16px, the extra 49px of space will exist around the text. The text itself is 16px tall, and the browser automatically divides the remaining 49px evenly above and below the text, keeping it centered within the line.  -- work for signle line in a footer only.
+    
+    Line-height adds extra space above and below the text evenly, even if there is no text above or below the current line.
+    
+    */
+    padding-top: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: RApple;
+
+}

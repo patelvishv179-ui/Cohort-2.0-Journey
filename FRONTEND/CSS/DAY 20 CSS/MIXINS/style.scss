@@ -1,0 +1,50 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+
+    height: 100%;
+    width: 100%;
+
+}
+
+@mixin flexcenter(){
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    @include flexcenter();
+    
+
+    section{
+
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        gap:30px;
+        background-color: wheat;
+        @include flexcenter();
+
+        h5{
+
+            font-size: 20px;
+            font-family: system-ui;
+
+        }
+
+    }
+
+}

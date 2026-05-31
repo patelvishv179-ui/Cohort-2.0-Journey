@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Syriac";
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+
+    height: 100%;
+    background: linear-gradient(lightblue,lightgray,lightyellow);
+    width: 100%;
+
+}
+
+/* Header */
+
+header{
+
+    height: 80px;
+    width: 100%;
+    padding: 20px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left-nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-nav img{
+
+    height: 55px;
+    width: 55px;
+
+}
+
+.left-nav h2{
+
+    margin-top: 10px;
+    font-size: 28px;
+
+}
+
+.middle-nav{
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.middle-nav h5{
+
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+
+.right-nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.right-nav h5{
+
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+#btnletstalk{
+
+    padding: 13px 22px;
+    font-weight: 600;
+    border: none;
+    background-color: #2C313F;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+
+}
+
+#btnletstalkarrow{
+
+    background-color: #BAC3FF;
+    color: black;
+    margin-left: 10px;
+    border-radius: 40px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+/* Section */
+
+section{
+
+    padding: 20px 42px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#btnnull{
+
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    background: url("./Button\ Image.avif");
+    background-size: cover;
+    background-position: top;
+    cursor: pointer;
+
+}
+
+span{
+
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 96px;
+
+}
+
+#howworks{
+    
+    padding: 14px 24px;
+    font-weight: 600;
+    border: 1px solid black;
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 16px;
+
+}
+
+#howworks:hover{
+
+    background: linear-gradient(lightblue,lightgray,lightyellow);
+
+}
+
+#howworksicon{
+
+    margin-right: 10px;
+    font-size: 18px;
+
+}
+
+.alignmentproblem{
+
+    display: flex;
+    justify-self: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+
+}
+
+#contactus{
+
+    padding: 15px 22px;
+    /* font-weight: 400; */
+    border: none;
+    background-color: #2C313F;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;   
+
+}
+
+#contactus:hover{
+
+    background: linear-gradient(lightblue,lightgray,lightyellow);
+    color: black;
+    border: 1px solid black;
+
+}
+
+#contactusicon{
+
+    font-size:20px;
+    margin-left: 5px;
+    display: inline-block;
+    transform: translateY(2px);
+    font-weight: 100;
+
+}
+
+.btn-group{
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+
+}
+
+#btncall{
+
+    border: none;
+    background: none;
+    text-decoration: underline;
+    text-underline-offset: 3px; /*underline how much away from text*/
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+#btncall:hover{
+
+    color: blue;
+    
+
+}
+
+.left-bottom{
+
+    margin-top: 170px;
+
+}
+
+.left-bottom h5{
+
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.footertextsgroup{
+
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    font-size: 25px;
+
+}
+
+/* Right Section */
+
+.imggrouprightsection{
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.right-section #image1{
+
+    height: 350px;
+    width: 622px;
+    border-radius: 40px;
+    cursor: pointer;
+
+}
+
+
+.right-section #image2{
+
+    height: 345px;
+    width: 300px;
+    border-radius: 40px;
+    cursor: pointer;
+
+}
+
+.right-section #image3{
+
+    height: 345px;
+    width: 300px;
+    border-radius: 40px;
+    cursor: pointer;
+
+}

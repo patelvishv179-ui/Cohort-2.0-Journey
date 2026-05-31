@@ -1,0 +1,107 @@
+Date: 28/12/2025
+====== Buttons ==========
+
+Buttons:-> Base class => .btn
+
+Bgcolors:   btn-primary(blue color)
+            btn-success (green)
+            btn-warning (yellow)
+            btn-secondary(Dark grayish blue color)
+            btn-info (Bright cyan)
+            btn-light
+            btn-dark
+            btn-link(only underline under the text)
+
+Button size: btn-lg and btn-small
+
+Button outlines:->
+
+    syntax:  btn-outline-colorname
+
+    examples:-> btn-outline-primary (blue color outline)
+                btn-outline-sucess (green color outline)
+
+
+=== Texts ==
+
+Alignments: text-start, text-end, text-center
+
+
+colors: .text-danger, .text-danger-emphasis, .text-success, .text-success-emphasis
+        .text-light etc.
+(emphasis means bhar apvo)
+
+TextTransforms:
+    text-lowercase, text-uppercase, text-capatalize
+
+Font-sizes:
+    fs-1,fs-2,fs-3,fs-4,fs-5,fs-6
+
+Font Waight:
+    Bold text: fw-bold
+    SemiBold Text: fw-SemiBold
+    Medium: fw-Medium
+    Normal: fw-Normal
+    LightWaight: fw-light
+
+Italic Text: fst-Italic, fst-normal;
+
+Lineheight: lh1-> Bahu ochhi spacing
+            lhbase-> Bootsramp by default spacing (1.5)
+            lh-sm-> thodi ochhi spacing (1.25)
+            lh-lg -> Bahu moti Lineheight (2)
+
+Font Family: font-monospace (itis not a normal family all word width will be same means small i and capital a both take same width)
+
+Text Decorations:
+
+    text-Decoration-underline
+    text-Decoration-none
+    text-Decoration-line-through
+
+
+== alerts ===
+
+base class=> alert
+
+bgclors: alert-secondary, alert-warning(yellow), alert-danger(red) etc.
+
+role = alert means it is mailny used for blind user to read out the message it only works when screen reader on hoy karvu hoy to window+control+enter dabavvu
+
+== Important concept view on documentation ==> card, breadcrumb, navbar
+
+======= Carousel:-> Sliders=========
+
+automatic slids , fradup Sliders
+
+========= collapse== click kare to navu kaik khule niche =====
+
+=== modals=  means alert jevu j ====
+
+==scrollspay =====
+
+margin and paddings
+
+Bootsramp ma margin ane padding ni values 0 thi 5 sudhi j api sakay chhe
+
+margin:
+
+my == use for top bottom
+mx == use for left right
+ms == mstart use for left
+me = mend use for right
+mt = use for top
+mb = use for bottom
+m - all side margin
+
+mx-auto:-> use for centering element horizontaly
+
+padding:
+
+same parameters like px,py,etc..
+
+========= container and container-fluid
+
+container use for give a margin left and right for container
+container-fluid thodi ochhi margin le
+

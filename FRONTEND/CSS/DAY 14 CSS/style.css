@@ -1,0 +1,418 @@
+@font-face {
+    font-family: Apple;
+    src: url(./BOLD\ APPLE.woff2);
+}
+
+@font-face {
+    font-family: RApple;
+    src: url(./REGULAR\ APPLE.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.main{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(36, 39, 38);
+
+}
+
+#nav{
+
+    height: 60px;
+    width: 100%;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    position: fixed;
+    z-index:1;
+
+}
+
+#nav h4{
+
+    color: white;
+    font-family: Apple;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Apple;
+
+}
+
+#nav h5{
+
+    color: white;
+    font-weight: 400;
+    font-family: RApple;
+
+}
+
+.middle{
+
+    height: 680px;
+    width: 100%;
+    background: url(./APPLE\ HEADER\ LOGO.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 80%;
+    background-size: cover;
+    text-align: center;
+    padding: 90px;
+
+}
+
+.middle h1{
+
+    font-size: 54px;
+    color: white;
+    font-family: Apple;
+
+}
+
+.links{
+
+    display: flex;
+    /* background-color: #fff; */
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.middle h3{
+
+    margin-top: 3px;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.middle button,.macbook button,.footer button{
+
+    margin-top: 24px;
+    background-color: royalblue;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 33px;
+    color: white;
+    font-size: 17px;
+    font-family: RApple;
+    font-weight: 100;
+    cursor: pointer;
+
+}
+
+.middle #buy,.macbook #buy,.footer #buy{
+
+    background-color: transparent;
+    color: royalblue;
+    border:1px solid royalblue;
+
+}
+
+.middle .macbook .footer #buy:hover{
+
+    /* border: none; */
+    background-color: royalblue;
+    color: white;
+
+
+}
+
+/* Normal Buttons */
+
+button{
+
+    margin-top: 24px;
+    background-color: royalblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 33px;
+    color: white;
+    font-size: 17px;
+    font-family: RApple;
+    font-weight: 100;
+    cursor: pointer;
+
+}
+
+#buy{
+
+    background-color: transparent;
+    color: royalblue;
+    border:1px solid royalblue;
+
+}
+
+#buy:hover{
+
+    /* border: none; */
+    background-color: royalblue;
+    color: white;
+
+
+}
+
+
+.footer{
+
+    height: 750px;
+    width: 100%;
+    background: url(./HAND\ LOGO.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 60px;
+
+}
+
+.footer h3{
+
+    margin-top: 3px;
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.footer h1{
+
+    font-size: 54px;
+    color: black;
+    font-family: Apple;
+
+}
+
+.macbook{
+
+    height: 820px;
+    width: 100%;
+    background: url(./MACBOOK.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 60px;
+
+}
+
+.macbook h3{
+
+    margin-top: 3px;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.macbook h1{
+
+    font-size: 54px;
+    color: white;
+    font-family: Apple;
+
+}
+
+.smartwatch{
+
+    height: 640px;
+    width: 100%;
+    background-color: rgb(247, 247, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    
+
+}
+
+.left{
+
+    height: 600px;
+    width: 48%;
+    /* background-color: antiquewhite; */
+    background: url(./LEFT\ FIRST.jpg);
+    background-repeat: no-repeat;
+    background-position:0% 90%;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.left img{
+
+    height: 40px;
+    object-fit: cover;
+
+}
+
+.left h3{
+
+    margin-top: 3px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.left h1{
+
+    font-size: 45px;
+    color: black;
+    font-family: Apple;
+
+}
+
+.right{
+
+    height: 600px;
+    width: 48%;
+    /* background-color: rgb(158, 115, 59); */
+    background: url(./RIGHT\ FIRST.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.right h3{
+
+    margin-top: 3px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: RApple;    
+
+}
+
+.right h1{
+
+    font-size: 40px;
+    color: white;
+    font-family: Apple;
+
+}
+
+
+.airpods{
+
+    height: 640px;
+    width: 100%;
+    background-color: rgb(253, 253, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    
+
+}
+
+.airpods .left{
+
+    height: 600px;
+    width: 48%;
+    /* background-color: antiquewhite; */
+    background: url(./AIRPODS.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.airpods .left h3{
+
+    margin-top: 3px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.airpods .left h1{
+
+    font-size: 45px;
+    color: black;
+    font-family: Apple;
+
+}
+
+.airpods .right{
+
+    height: 600px;
+    width: 48%;
+    /* background-color: rgb(158, 115, 59); */
+    background: url(./MACBOOK\ AIR.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.airpods .right h3{
+
+    margin-top: 3px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: RApple;
+
+}
+
+.airpods .right h1{
+
+    font-size: 45px;
+    color: black;
+    font-family: Apple;
+
+}
+
+.end{
+
+    height: 65px;
+    width: 100%;
+    background: linear-gradient(#272F3E,#11141b);
+    text-align: center;
+
+}
+
+.end h4{
+ 
+    line-height: 65px; 
+    
+    /* Line-Height == Footter Height. If the line-height is 65px and the font-size is 16px, the extra 49px of space will exist around the text. The text itself is 16px tall, and the browser automatically divides the remaining 49px evenly above and below the text, keeping it centered within the line.  -- work for signle line in a footer only.
+    
+    Line-height adds extra space above and below the text evenly, even if there is no text above or below the current line.
+    
+    */
+    padding-top: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: RApple;
+
+}

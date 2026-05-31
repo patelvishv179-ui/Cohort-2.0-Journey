@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 42 | 26/04/2026</title>
+</head>
+<body>
+
+    <h1>0</h1>
+    <button>Increment</button>
+
+    <script>
+
+        let btn = document.querySelector("button");
+        let count = 0;
+        let h1 = document.querySelector("h1");
+
+
+
+        btn.addEventListener("click",()=>{
+
+            setInterval(() => {
+                count++;
+                h1.textContent = count;
+            }, 20);
+
+        });
+
+    </script>
+</body>
+</html>

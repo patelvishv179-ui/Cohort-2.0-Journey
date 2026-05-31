@@ -1,0 +1,181 @@
+Day 38 | 01/08/2026
+
+=== Pure Function ===
+
+Ak aisa Fucntion jisme same value bhejo same output return karega
+Koi said Effect nahi Hota
+
+    function abcd(val){
+
+        console.log(val + 2);
+
+    }       
+    
+    abcd(12);
+    abcd(12);
+    abcd(12);
+
+    == har bar same value sam output
+
+--=== Impure Fucntion -===
+
+Har bar same value Diff output or bahar vale variable ki value change kar di
+
+
+    function abcd(val){
+
+        console.log(Math.random()  + val);
+
+    }       
+    
+    abcd(12);
+    abcd(12);
+    abcd(12);
+
+----===== Arrays =========
+
+How to create:
+
+        let a = new Array();
+
+            or
+        
+        let arr = ["vishv","Patel"];
+
+=== Array Fucntions ====
+
+1. pop(): - Remove last element on the end of array
+
+        let arr = [0,1,2,3];
+        arr.pop();
+        console.log(arr); //  [0, 1, 2]
+
+2. push():-> add element on end of the array
+
+        let arr = [0,1,2,3];
+        arr.push(4);
+        console.log(arr); //  [0, 1, 2, 3, 4]
+
+3. shift():-> Remove element on the start of the array
+    
+        let arr = [0,1,2,3];
+        arr.shift();
+        console.log(arr); //  [1, 2, 3]
+
+4. unshift():-> Add the element on the start of the array
+
+        let arr = [1,2,3];
+        arr.unshift(0);
+        console.log(arr); //  [0, 1, 2, 3]
+
+5. indexof(): Return the index of given element
+
+        let arr = [1,2,3,4];
+        console.log(arr.indexOf(3)); // 2
+
+6. array distructuring:
+
+        let arr = [1, 2, 3, 4, 5];
+
+        let [a,b] = arr;
+
+        console.log(a); //1
+        console.log(b); //2
+
+                or
+        
+        let arr = [1, 2, 3, 4, 5];
+
+        let [a,,,b] = arr;
+
+        console.log(a); // 1
+        console.log(b); //4
+
+7. filter():-> Values levi filter kari jem ke return val<12 to je values 12 karta nani hase array ma te madi jase 
+
+        let arr = [1, 2, 3, 4, 5];
+
+        //array filter method
+
+        let filteredArr = arr.filter(function(num) {
+            return num > 2;
+        });
+
+        console.log(filteredArr); // Output: [3, 4, 5]
+
+
+8. some():-> use for check if any value is satistfy giving conditon always return true or false jem ke any value  <12 in array to hase to true return karse:
+
+        let arr = [1, 2, 3, 4, 5];
+
+        //array some method
+
+        let result = arr.some((value) => value > 3);
+
+        console.log(result); // true
+
+9. reduce():-> ek accumlator ape je value store kare const
+
+        // Array reduce method
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        // Sum all numbers in the array
+        const sum = numbers.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0);
+        console.log("Sum of numbers:", sum); // Output: 15
+
+10. map():-> for each ni jem ek ek mate chalve 
+
+ //array map method
+        const numbers = [1, 2, 3, 4, 5];
+        const squaredNumbers = numbers.map(num => num * num);
+        console.log('Squared Numbers:', squaredNumbers); // [1, 4, 9, 16, 25]
+
+11.        // array slice method = used to extract a section of an array and return it as a new array, without modifying the original array.
+       let arr = [10, 20, 30, 40, 50,
+                    60, 70, 80, 90, 100];
+        let newArr = arr.slice(2, 6);
+        console.log(newArr); // [30, 40, 50, 60]
+
+12.         // aray splice method used for adding/removing items in an array
+        let myArray = ['item1', 'item2', 'item3', 'item4', 'item5'];
+        console.log('Original Array:', myArray);
+        // Removing 2 items starting from index 1
+        let removedItems = myArray.splice(1, 2);
+        console.log('After Splice (removal):', myArray);
+        console.log('Removed Items:', removedItems);
+        // Adding new items at index 2
+        myArray.splice(2, 0, 'newItem1', 'newItem2');
+        console.log('After Splice (addition):', myArray);
+
+13.         // aray reverse method used for reversing the array elements
+        let arr = [1, 2, 3, 4, 5];
+        arr.reverse();
+        console.log(arr); // Output: [5, 4, 3, 2, 1]
+
+14.         // array sort method use for sorting the array elements in ascending or descending order.
+
+        let numbers = [5, 3, 8, 1, 2];
+        console.log("Original array:", numbers);
+        // Sorting in ascending order
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+        console.log("Sorted array (ascending):", numbers);
+        // Sorting in descending order
+        numbers.sort(function(a, b) {
+            return b - a;
+        });
+        console.log("Sorted array (descending):", numbers);
+
+15.         let arr = ['Hello', 'world', 'this', 'is', 'JavaScript'];
+        let str = arr.toString();
+        console.log(str); // Output: "Hello,world,this,is,JavaScript"
+
+16. for each loop:
+
+
+
+

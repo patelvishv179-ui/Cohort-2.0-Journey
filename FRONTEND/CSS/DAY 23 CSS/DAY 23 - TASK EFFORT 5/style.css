@@ -1,0 +1,1048 @@
+@font-face {
+    font-family: Chillax;
+    src: url("./Assets/Chillax.woff");
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url("./Assets/RobotoMono.woff2");
+}
+
+@font-face {
+    font-family: Satoshi;
+    src: url("./Assets/Satoshi.woff");
+}
+
+:root{
+    --primary: #1E1E1E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+html{
+    font-size: clamp(12px,2vw,15px);
+    scroll-behavior: smooth;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #1E1E1E;
+}
+main {
+    width:100%;
+    background-color: #121212;
+    padding: 1rem;
+    max-width: 1540px;
+} 
+
+/* Note Only Header Part of This Code Is Laptop First Approach */
+
+/* Header Part*/
+
+header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__leftnav h1{
+    transform: translateX(8px);
+    font-size: 1.2rem;
+    font-family: "Chillax";
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.header__rightnav{
+    display: flex;
+    gap: 10px;
+}
+
+#header__gitbtn{
+    background-color: #CEBD63;
+    color: black;
+}
+#header__gitbtn:hover{
+    background-color: #AD9D49;
+}
+
+.header__rightnav button{
+    padding: 1.1rem 1.5rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    font-family: "RobotoMono";
+    color: white;
+    background-color: var(--primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.header__rightnav button:hover{
+    background-color: #2A2A2A;
+}
+
+#header__cardbtn__titaicon{
+    background-color: #CEBD63;
+    padding: 0.1rem 0.445rem;
+    border-radius: 50%;
+    color: black;
+    font-size: 0.9rem;
+}
+
+#header__MenuIcon{
+    outline: none;
+    border-radius: 0.4rem;
+    font-family: "RobotoMono";
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 1rem 1rem;
+    display: none;
+}
+
+/* View 1 */
+
+.view1{
+    width: 100%;
+    display: flex;
+    color: white;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.view1__left,.view1__right{
+    width: 50%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.view1__left{position: relative;}
+
+.cover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("./Assets/CoverImage");
+    background-size: cover;
+    filter: blur(3px);
+}
+
+.view1__left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view1__right{
+    background-color:   #1E1E1E;
+    padding: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.view1__right__brandname{
+    font-size: 0.9rem;
+    font-family: "RobotoMono";
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.view1__rightbottom__brandtitle{
+    font-size: 3.6rem;
+    font-family: "Chillax";
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.view1__rightbottom__branddiscription{
+
+    font-family: "Satoshi";
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 0.6;
+    line-height: 2rem;
+
+}
+
+.view1__right__bottom{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.ourstory__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.1rem;
+}
+
+.arrow{
+    padding: 0.9rem 0.950rem;
+    background-color: #292929;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #9f9e9c;
+
+}
+
+.ourstory__text{
+
+    font-size: 0.9rem;
+    font-family: "RobotoMono";
+    font-weight: 400;
+    opacity: 1;
+
+}
+
+/* View 2 */
+
+.view2{
+    display: flex;
+    color: white;
+    width: 100%;
+    margin-top: 4.5rem;
+    gap: 4rem;
+}
+
+.view2__left,.view2__right{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.view2__right{margin-right: 1.3rem;}
+
+.element{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.view2 h3{
+    font-family: "RobotoMono";
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.view2 h1{
+    font-family: "Chillax";
+    font-size: 4.3rem;
+    font-weight: 300;
+}
+
+/* View3 */
+
+.view3{
+    width: 100%;
+    display: flex;
+    color: white;
+    margin-top: 4rem;
+    justify-content: center;
+    gap: 1rem;   
+}
+
+
+.view3__left,.view3__right{
+    width: 50%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.view3__right{position: relative;}
+
+
+.view3__right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view3__left{
+    background-color:   #1E1E1E;
+    padding: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.view3__left__smalltitle{
+    font-size: 0.9rem;
+    font-family: "RobotoMono";
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.view3__left__title{
+    font-size: 3.4rem;
+    font-family: "Chillax";
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.view3__letf__bootom__textcontainer{
+    display: flex;
+    justify-content: space-between;
+    gap:1.2rem;
+}
+
+.view3__left__bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.view3__letf__bootom__textcontainer p{
+    font-family: "Satoshi";
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.6;
+    line-height: 2rem;
+    max-width: 47%;
+    text-align: initial;
+}
+
+.cover2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("./Assets/CoverImage");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.063);
+    backdrop-filter: blur(0.4px);
+}
+
+/* View4 */
+
+.view4{flex-direction: row-reverse;margin-top: 1.5rem;}
+
+/* View 5 */
+
+.view5{
+    width: 100%;
+    color: white;
+    margin-top: 2.5rem;  
+}
+
+.view5__top{
+    margin: 0px 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.view5__top h1{
+    font-family: "Chillax";
+    font-weight: 400;
+    font-size: 2.8rem;   
+}
+
+.view5__top__right{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.view5__top__right h4{
+    font-family: "RobotoMono";
+    font-weight: 500;
+}
+
+.view5__top__right .findjob{
+    padding: 0.8rem 0.850rem;
+    background-color: #292929;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #9f9e9c;  
+}
+
+/* View 5 Bottom (Cards) */
+
+
+.view5__bottom{margin-top: 2.5rem;width: 100%;display: flex;gap:1rem;align-items: center;}
+
+
+.view5__card{
+
+    background: url("./Assets/View6Image1.webp");
+    width: 33%;
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem;
+    border-radius: 0.7rem;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+.view5__card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./Assets/CoverImage");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1;
+    backdrop-filter: blur(0.2px);
+}
+
+.view5__card * {
+    position: relative;
+    z-index: 2;
+}
+
+.view5__card__top{display: flex;justify-content: flex-end;gap: 1rem;margin-top: 0.8rem;}
+
+.icons{
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: #2c2b2b39;
+    border: 1px solid rgb(98, 97, 97);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+
+.view5__card__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(170, 165, 165, 0.278);
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border: 0.2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.view5__card__bottom h2{
+    font-family: "Chillax";
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.view5__card__bottom h3{
+    font-family: "RobotoMono";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* For card 2 of view5 bottom*/
+
+.view5__bottom .img2{
+    background: url("./Assets/View6Image2.webp");
+    background-size: cover;
+}
+
+/* For card 3 of view5 bottom*/
+
+.view5__bottom .img3{
+    background: url("./Assets/View6Image3.webp");
+    background-size: cover;
+}
+
+/* View 7 */
+
+.view7__left{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.view7{
+    margin-top: 1rem;
+}
+
+/* View 8 */
+
+.view8{
+    background-color: #CEBD63;
+    color: black;
+    margin-top: 1rem;
+    padding: 3.8rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.view8__top h3{
+    font-family: "RobotoMono";
+    font-weight: 300;
+}
+
+.view8__bottom{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.view8__bottom h1{
+    font-family: "Chillax";
+    font-weight: 500;
+    font-size: 4rem;
+    width: 50%;
+}
+
+.btn{
+    padding: 1.2rem 1.7rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    font-family: "RobotoMono";
+    color: white;
+    background-color: var(--primary);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* View 9 */
+
+.view9{
+    display: grid;
+    grid-template-columns:0.8fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-top: 1rem;
+    grid-gap: 1rem;
+    grid-template-areas:  "left righttop righttop righttop"
+                          "left rightbottom rightbottom rightbottom"                      
+    ;
+}
+
+.view9__left{
+    grid-area: left;
+    color: white;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1.2rem;
+    padding: 3rem;
+    border-radius: 0.8rem;
+}
+
+.view9__left h1{
+    font-family: "Chillax";
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.view9__left__bottom{
+    display: flex;
+    gap:1rem;
+} 
+
+.view9lefticons{
+    padding: 0.7rem;
+}
+
+.view9__right__top{
+    background-color: #1E1E1E;
+    grid-area: righttop;
+    color: white;
+    padding: 2.7rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: red; */
+    gap:14rem;
+    align-items: flex-start;
+}
+
+.view9__right__bottom{
+    background-color: #1E1E1E;
+    grid-area: rightbottom;
+    color: white;
+    padding: 1.8rem 2.7rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.view9__right__top h1{
+    font-size: 1.4rem;
+    font-family: "Chillax";
+    font-weight: 400;
+}
+
+.view9__right__bottom h2{
+    font-size: 1rem;
+    font-family: "RobotoMono";
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.cms h2,.pages h2,.utilitypages h2{
+    font-family: "RobotoMono";
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #A5A3A0;
+    max-width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+
+.cms h2::after,.pages h2::after,.utilitypages h2::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background-color: white;
+    bottom: -8px;
+    left:0;
+    transition: width 0.4s ease-in-out;
+}
+
+.cms h2:hover::after,.pages h2:hover::after,.utilitypages h2:hover::after{
+    width: 100%;
+}
+
+.cms,.pages,.utilitypages{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    /* background-color: red; */
+}
+
+.footerspan{
+    text-decoration: underline;
+    color: white;
+}
+
+.containertotop{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.totoptext{
+    font-family: "RobotoMono";
+    font-size: 1rem;
+    font-weight: 400;  
+}
+
+.btn-primary{
+    background-color: #CEBD63;
+    color: black;
+    padding: 1rem 1.4rem;
+}
+
+.btn-primary:hover{
+    background-color: #AD9D49;
+}
+
+a{text-decoration: none;color: white;}
+
+
+/* For Mobiles */
+
+@media (min-width: 320px) and (max-width: 497px) {   
+    .header__leftnav h1{font-size: 1rem;}
+    #header__gitbtn{display: none;}
+    #header__cartbtn{display: block;}
+    #header__MenuIcon{display: block;}
+    .header__rightnav button{display: none;}
+
+    /* View 1 */
+    .view1{flex-direction: column;}
+    .view1__left,.view1__right{width: 100%;}
+    .view1__right{padding: 2.6rem;gap:3.5rem}
+    .view1__rightbottom__brandtitle{
+        font-size: 2.3rem;
+    }
+    .view1__rightbottom__branddiscription{
+        font-size: 1.2rem;
+    }
+
+    /* View 2 */
+
+    .view2{flex-direction: column;gap:2rem;}
+    
+    .view2 h3{
+        font-size: 1.1rem;
+        font-family: 100;
+    }
+    .view2 h1{
+        font-size: 3rem;
+    }   
+
+    /* View 3 */
+
+    .view3{flex-direction: column-reverse}
+    .view3__left,.view3__right{width: 100%;}
+    .view3__left{padding: 2.6rem;gap:4.5rem}
+    .view3__left__title{font-size: 2.3rem;}
+    .view3__letf__bootom__textcontainer{display: block;gap:1.5rem}
+    .view3__letf__bootom__textcontainer p{max-width: 98%;font-size: 1.2rem;line-height: 2.2rem;display: inline;}
+
+    /* View 5 */
+    .view5{margin-top: 2rem;}
+    .view5__top{margin: 0rem 1rem;}
+    .view5__top h1{font-size: 2.2rem;}
+    .view5__top__right{display: none;}
+
+    /* View5 Bottom */
+
+    .view5__bottom{flex-direction: column;}
+    .view5__card{width: 100%;padding: 0.5rem;}
+    .view5__card__top{margin-top: 0.2rem;}
+
+    /* View 7 */
+
+    .view7__arrow{display:flex;}
+    .view7__title{font-size: clamp(2rem, 2.2rem, 2.6rem);}
+
+    /* View 8 */
+
+    .view8{gap:3rem; padding: 2.7rem}
+
+    .view8__bottom{flex-direction: column;
+    align-items: flex-start;gap:1rem;
+    }
+    
+    .view8__bottom h1{width: 100%;font-size: 2rem;}
+
+    /* View 9 */
+
+    .view9{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left left"
+            "righttop righttop"
+            "rightbottom rightbottom";
+    }
+
+    .view9__right__top{
+        display: flex;
+        flex-direction: column;
+        gap:4rem;
+    }
+
+    .view9__left{gap:5rem}
+    
+    .view9lefticons{font-size: 1.2rem;padding: 1.2rem;}
+
+    .view9__left h1{
+        font-size: 1.5rem;
+    }
+
+    .cms h2,.utilitypages h2,.pages h2{font-size: 1.2rem;}
+    .cms h1,.utilitypages h1,.pages h1{font-size: 1.8rem;}
+
+    .view9__right__bottom{
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+    }
+
+    .view9__right__bottom h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #a3a39e;
+    }
+    
+    .view9righticon{
+        font-size: 1.2rem;
+    }
+
+    .view9__right__bottom h2{
+        font-size: 1.3rem;
+        text-align: center;
+        color: #6E6E6C;
+        font-weight: 500;
+    }
+
+    .btn-primary{
+        font-size: 1rem;
+        padding: 1rem 1.4rem;
+    }
+
+}
+
+
+/* For Tablates */
+
+@media (min-width: 498px) and (max-width: 1024px){
+    .header__leftnav h1{font-size: 1rem;}
+    .header__rightnav button{display: none;}
+    #header__cartbtn,#header__gitbtn{display: block;}
+    #header__MenuIcon{display: block;}
+
+    
+    /* View 1 */
+    .view1{flex-direction: column;}
+    .view1__left,.view1__right{width: 100%;}
+    .view1__right__brandname{font-size: 1.2rem;}
+    .view1__right{padding: 2.8rem;gap:6rem}
+    .view1__right__bottom{gap:2rem}
+    .view1__rightbottom__brandtitle{
+        font-size: clamp(3rem,3.9rem,4rem);
+    }
+    .view1__rightbottom__branddiscription{
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+    }
+    .ourstory__text{font-size: 1.2rem;}
+    .arrow{padding: 1.3rem;font-size: 1rem;}
+
+        /* View 2 */
+
+    .view2{flex-direction: column;gap:2rem;}
+    .view2 h3{
+        font-size: 1.2rem;
+        font-family: 100;
+    }
+    .view2 h1{
+        font-size: 4rem;
+    }  
+
+    /* View 3 */
+
+    .view3{flex-direction: column-reverse;}
+    .view3__left,.view3__right{width: 100%;}
+    .view3__left{padding: 2rem;gap:6rem}   
+    .view3__left h1{font-size: clamp(3rem,3.9rem,4rem);}
+    .view3__letf__bootom__textcontainer p{font-size: 1.3rem;}
+
+    /* View 5 */
+
+    /* View 5 */
+    .view5{margin-top: 2rem;}
+    .view5__top{margin: 0rem 1rem;}
+    .view5__top h1{font-size: clamp(1.9rem,2.2rem,2.1rem);}
+    /* .view5__top__right{display: none;} */
+
+    /* View5 Bottom */
+
+    .view5__bottom{flex-direction: column;}
+    .view5__card{width: 100%;}
+    
+     /* View 7 */
+
+    .view7__arrow{display: flex;}
+    .view7__title{font-size: 3rem !important}
+
+    /* View 8 */
+
+    .view8{gap:3rem;padding: 2rem}
+
+    .view8__bottom{flex-direction: column;
+    align-items: flex-start;gap:1rem;
+    }
+    
+    .view8__bottom h1{width: 100%;font-size: 3rem;}
+
+    /* View 9 */
+
+    .view9{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left left"
+            "righttop righttop"
+            "rightbottom rightbottom";
+    }
+
+    .view9__right__top{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        column-gap: 10rem;
+    }
+
+    .view9__left{gap:5rem}
+    
+    .view9lefticons{font-size: 0.8rem;padding: 1rem;}
+
+    .view9__left h1{
+        font-size: 1.5rem;
+    }
+
+    .cms h2,.utilitypages h2,.pages h2{font-size: 1.2rem;}
+    .cms h1,.utilitypages h1,.pages h1{font-size: 1.8rem;}
+
+    .view9__right__bottom{
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+    }
+
+    .view9__right__bottom h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #a3a39e;
+    }
+    
+    .view9righticon{
+        font-size: 1.2rem;
+    }
+
+    .view9__right__bottom h2{
+        font-size: 1.3rem;
+        text-align: center;
+        color: #6E6E6C;
+        font-weight: 500;
+    }
+
+    .btn-primary{padding: 0.8rem 1rem;white-space: nowrap;}
+
+    .view9righticon{padding: 0.6rem;}
+
+    .view9__right__top h2{font-size: 0.9rem;white-space: nowrap;}
+
+}
+
+/* Laptops */
+
+@media(min-width:1026px) and (max-width: 1440px){
+/* View 1 */
+    .view1{flex-direction: row;}
+    .view1__left,.view1__right{width: 50%;}
+    .view1__right__brandname{font-size: 0.9rem;}
+    .view1__right{padding: 2.8rem;gap:5rem}
+    .view1__right__bottom{gap:2rem}
+    .view1__rightbottom__brandtitle{
+        font-size: 3rem;
+    }
+    .view1__rightbottom__branddiscription{
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+    .ourstory__text{font-size: 0.9rem;}
+    .arrow{padding: 1.2rem;font-size: 0.7rem;}
+
+    /* View 2 */
+
+    .view2 .element h1{
+        font-size: 3rem;
+    }
+
+    .view2{gap:0}
+
+    .view2__right{
+        margin-right: 1.2rem;
+    }   
+
+    /* View 3 */
+
+    .view3{flex-direction: row;}
+    .view3__left,.view3__right{width: 50%;}
+    .view3__left{padding: 2.8rem;gap:5rem}
+    .view3__left__title{font-size: clamp(2rem,3rem,3.5rem);}
+    
+    /* View 4 */
+    .view4{flex-direction: row-reverse;}
+
+    /* View5 */
+
+    .view5{margin-top: 2rem;}
+    .view5__top{margin: 0rem 1rem;}
+    .view5__top h1{font-size: clamp(1.9rem,2.2rem,2.1rem);}
+    .view5__top__right .findjob{padding: 0.9,0.950;font-size: 0.9;}
+
+    /* View5 Bottom */
+
+    .view5__card{padding: 0.5rem;}
+    .view5__card h2{font-size: 1rem;}
+    .view5__card h3{font-size: 0.8rem;}
+    .view5__card__top .icons{padding: 0.6rem;font-size: 0.7rem;}
+    .view5__card__top{margin-top: 0.4rem;}
+
+    /* View 7 */
+
+    .view7__arrow{display: flex;}
+    .view7__title{font-size: clamp(2.2rem,3vw,3.4rem)}
+
+    /* View  8 */
+    .view8{gap:3rem;padding: 2.8rem}
+
+    .view8__bottom{flex-direction: column;
+    align-items: flex-start;gap:2rem;
+    }
+    
+    .view8__bottom h1{width: 80%;font-size: clamp(3.2rem,3.8rem,3.8rem)}
+    
+    /* View 9  */
+/* 
+    .view9{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left left"
+            "righttop righttop"
+            "rightbottom rightbottom";
+    } */
+    
+    .view9__right__top{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap:clamp(11rem, 10vw, 18rem);
+        row-gap: 4rem;
+    }
+
+    .btn-primary{padding: 1rem 1.2rem;white-space: nowrap;}
+
+    .view9righticon{padding: 0.8rem;}
+
+    .view9__right__top h2{font-size: 0.9rem;white-space: nowrap;}
+
+}
+
+/* For 4k */
+
+@media (min-width: 1538px){
+    body{
+        display: flex;
+        background-color: #121212;
+        justify-content: center;
+    }
+    .view5__top__right{
+        margin-bottom: 3.8rem;
+    }
+    .view5__top .findjob{
+    padding: 1.4rem;
+    background-color: #292929;
+    font-size: 1rem;
+    }
+    .view5__top__right h4{font-size: 1.4rem;}
+}
