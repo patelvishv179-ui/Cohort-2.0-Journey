@@ -1,13 +1,14 @@
 # COHORT 2.0 Journey 🚀
 
-A repository to document my learning journey through Cohort 2.0, including frontend development, assignments, projects, notes, and hands-on practice.
+A repository to document my learning journey through Cohort 2.0, including frontend development, React.js, assignments, projects, notes, and hands-on practice.
 
 ## Tech Used
 
 * HTML5
 * CSS3
 * Bootstrap
-* JavaScript
+* JavaScript (ES6+)
+* React.js
 
 ## Structure
 
@@ -16,7 +17,8 @@ FRONTEND/
 ├── HTML/
 ├── CSS/
 ├── BOOTSTRAP/
-└── JS/
+├── JS/
+└── REACT/
 ```
 
 ## Note
@@ -26,24 +28,27 @@ The day numbers in folder names represent the actual Cohort 2.0 day number, not 
 For example:
 
 ```text
+HTML/DAY 08 HTML
 CSS/DAY 10 CSS
 JS/DAY 39 JS
-HTML/DAY 8 HTML
+REACT/DAY 67 REACT
 ```
 
-Here, DAY 10, DAY 39, and DAY 8 refer to the corresponding Cohort 2.0 learning days.
+Here, the day number corresponds to the Cohort 2.0 learning schedule.
 
 ## Goal
 
-* Build a strong foundation in web Development.
+* Build a strong foundation in Frontend and React Development.
 * Create real-world projects.
 * Improve problem-solving and coding skills.
 * Become job-ready through consistent learning and practice.
 
 ## Progress
 
-This repository is updated regularly as I complete new topics, assignments, and projects throughout Cohort 2.0.
+This repository is updated regularly as I complete new topics, assignments, projects, and React exercises throughout Cohort 2.0.
 
 ## Author
 
-Patel Vishv
+**Patel Vishv**
+
+⭐ Learning every day and building projects consistently.
